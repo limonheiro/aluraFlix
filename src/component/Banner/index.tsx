@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import img from '../../assets/img/madMax.jpg'
 
-const BannerStyled = styled.div`
+const BannerStyled = styled.div<{image:string}>`
     display: flex;
     flex-direction: column;
     width: 100%;
