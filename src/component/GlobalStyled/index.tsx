@@ -2,6 +2,9 @@ import { createGlobalStyle } from 'styled-components'
 import './reset.css'
 
 export const GlobalStyled = createGlobalStyle`
+
+    width: 100%;
+
     .bg_title{
         font-size: 64px;
         font-weight: 900;
@@ -24,6 +27,11 @@ export const GlobalStyled = createGlobalStyle`
 
     body{
         min-width: 350px;
+        /* height: 100%; */
+        /* width: 100%; */
+        color: #fff;
+        display: flex;
+        flex-direction: column;
     }
 
 `
