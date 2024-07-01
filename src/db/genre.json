@@ -1,0 +1,80 @@
+{
+ "genres": [
+ {
+ "id": 28,
+ "nome": "Ação"
+ },
+ {
+ "id": 12,
+ "nome": "Aventura"
+ },
+ {
+ "id": 16,
+ "nome": "Animação"
+ },
+ {
+ "id": 35,
+ "nome": "Comédia"
+ },
+ {
+ "id": 80,
+ "nome": "Crime"
+ },
+ {
+ "id": 99,
+ "nome": "Documentário"
+ },
+ {
+ "id": 18,
+ "nome": "Drama"
+ },
+ {
+ "id": 10751,
+ "nome": "Família"
+ },
+ {
+ "id": 14,
+ "nome": "Fantasia"
+ },
+ {
+ "id": 36,
+ "nome": "Histórico"
+ },
+ {
+ "id": 27,
+ "nome": "Terror"
+ },
+ {
+ "id": 10402,
+ "nome": "Música"
+ },
+ {
+ "id": 9648,
+ "nome": "Mistério"
+ },
+ {
+ "id": 10749,
+ "nome": "Romance"
+ },
+ {
+ "id": 878,
+ "nome": "Ficção Científica"
+ },
+ {
+ "id": 10770,
+ "nome": "TV"
+ },
+ {
+ "id": 53,
+ "nome": "Thriller"
+ },
+ {
+ "id": 10752,
+ "nome": "Guerra"
+ },
+ {
+ "id": 37,
+ "nome": "Ocidental"
+ }
+ ]
+}
