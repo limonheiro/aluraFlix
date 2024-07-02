@@ -27,8 +27,8 @@ export const GlobalStyled = createGlobalStyle`
 
     body{
         min-width: 350px;
-        /* height: 100%; */
-        /* width: 100%; */
+        height: 100%;
+        /* width: 100vh; */
         color: #fff;
         display: flex;
         flex-direction: column;

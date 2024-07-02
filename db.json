@@ -256,7 +256,7 @@
          ],
          "id":955555,
          "original_language":"ko",
-         "overview":"",
+         "overview":"Segue o detetive Ma Seok Do e uma gangue em Geumcheon-seo, que estão tentando limpar crimes de drogas em Incheon.",
          "popularity":941.656,
          "poster_path":"/kPtNokhBtgwSp3MHaR3X4O0SPbF.jpg",
          "release_date":"2023-05-31",
@@ -308,21 +308,6 @@
          "poster_path":"/zDkaJgsPoSqa2cMe2hW2HAfyWwO.jpg",
          "release_date":"2024-05-09",
          "title":"The Last Kumite",
-         "video":false
-      },
-      {
-         "backdrop_path":"/3TNSoa0UHGEzEz5ndXGjJVKo8RJ.jpg",
-         "genre_ids":[
-            878,
-            28
-         ],
-         "id":614933,
-         "original_language":"en",
-         "overview":"Uma brilhante analista em contraterrorismo não confia em inteligência artificial, mas precisa usá-la quando a missão para capturar um robô rebelde dá errado.",
-         "popularity":807.255,
-         "poster_path":"/bcM2Tl5HlsvPBnL8DKP9Ie6vU4r.jpg",
-         "release_date":"2024-05-23",
-         "title":"Atlas",
          "video":false
       },
       {
@@ -641,22 +626,6 @@
          "poster_path":"/mtgqrSlT47VsmeMVanLTny7BknB.jpg",
          "release_date":"2015-05-13",
          "title":"Mad Max: Estrada da Fúria",
-         "video":false
-      },
-      {
-         "backdrop_path":"/k9X79JC2dDTcSpxuKJ3p2Teq3oZ.jpg",
-         "genre_ids":[
-            878,
-            28,
-            12
-         ],
-         "id":1025463,
-         "original_language":"pt",
-         "overview":"Em um futuro distópico em que as próteses robóticas dominam os esportes, duas irmãs competem no salto em distância. Só que essa rivalidade leva a um caminho sinistro.",
-         "popularity":586.835,
-         "poster_path":"/ns9Tr9fda1YuPK2k6BqwqmEOkgl.jpg",
-         "release_date":"2024-05-28",
-         "title":"Biônicos",
          "video":false
       },
       {

@@ -4,19 +4,23 @@ import img from '../../assets/img/madMax.jpg'
 const BannerStyled = styled.div<{image:string}>`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    min-height: 350px;
+    width:100vw;
+    max-width: 100%;
     align-items: center;
     height: 516px;
     background-image: ${props => props.image && `url(${props.image})`};
     background-size:cover;
     background-repeat:no-repeat;
     background-position: right;
+    margin-bottom: 2rem;
+
 `
 const ContainerBannerStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 1200px;
+    width: 100%;
     height: 100%;
 
     nav{

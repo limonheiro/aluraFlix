@@ -1,12 +1,11 @@
 
-import img from '../../../assets/img/ToyStory.jpg'
 import styled, { css } from 'styled-components'
 import { CirclePlay, SquarePen } from 'lucide-react';
 import { CircleX } from 'lucide-react';
 import { useState } from 'react';
 
-type PanelProps = {
-    isFocused : boolean
+type PanelVar = {
+    isfocused: number
 }
 
 const blurStyled = css`
@@ -14,17 +13,21 @@ const blurStyled = css`
 `
 
 const ContainerStyled = styled.div`
+    min-width: 280px;
     max-width: 280px;
     height: 150px;
+    padding-top: 0.25;
+    padding-bottom: 1rem;
 `
 
-const ContainerPanelStyled = styled.div<PanelProps>`
+const ContainerPanelStyled = styled.div<PanelVar>`
     position: relative;
     width: 100%;
     height: 100%;
 
-    ${( {isFocused} ) => {
-        return isFocused && blurStyled}}
+    ${({ isfocused }) => {
+        return isfocused && blurStyled
+    }}
 
 `
 
@@ -47,7 +50,7 @@ const displayStyle = css`
 `;
 
 
-const ContainerBottomStyled = styled.div<PanelProps>`
+const ContainerBottomStyled = styled.div<PanelVar>`
     display: none;
     flex-direction: column;
     height:150px;
@@ -59,8 +62,9 @@ const ContainerBottomStyled = styled.div<PanelProps>`
     padding-top: 5px;
     margin-top: 8px;
 
-    ${( {isFocused} ) => {
-        return isFocused && [displayStyle, blurStyled]}}
+    ${({ isfocused }) => {
+        return isfocused && [displayStyle, blurStyled]
+    }}
 
 `
 
@@ -72,9 +76,12 @@ const ContainerTitleStyled = styled.div`
     padding-left:1rem;
     position: absolute;
     bottom: 0;
+    max-width: 250px;
     h1{
         font-size: 24px;
-        font-weight: 900;   
+        font-weight: 900;
+        text-shadow: black 0.1rem 0.1rem 2rem
+   
     }
 
 `
@@ -86,6 +93,7 @@ const ContainerSubtitleStyled = styled.div`
     justify-items: flex-start;
     gap: 8px;
     text-align: left;
+    text-shadow: black 0.1rem 0.1rem 2rem;
 
     :first-child{
         flex-shrink: 9;
@@ -104,6 +112,10 @@ const ContainerDescribeStyled = styled.div`
     justify-content: flex-start;
     justify-content: space-between;
     padding: 0.5rem 0;
+
+    .lucide {
+        cursor: pointer;
+    }
 
     :first-child{
         padding-left: 8px;
@@ -129,50 +141,95 @@ const TextDescribeStyled = styled.p`
     font-weight: 300;
     height: fit-content;
     max-height: 110px;
+    max-height: 80px;
+    overflow: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #000 #fff;
+
     padding: 0 16px 16px 8px;
     line-height: 1.3;
 `
 
-export const Panel = () => {
+const DialogStyled = styled.dialog`
+    z-index: 999;
+`
 
-    const [isFocused, setFocused] = useState<true | false>(false);
+type PanelProps = {
+    id: string
+    title: string
+    genre: string
+    ano: string
+    describe: string
+    img: string
+}
 
-    const onFocusHandle = () =>{
-        console.log('focus')
-        setFocused(true)
+
+
+export const Panel = ({ id, title, genre, ano, describe, img }: PanelProps) => {
+
+    const [isfocused, setFocused] = useState<boolean>(false);
+    const [showModal, setShowModal] = useState<boolean>(false);
+    const [linkVideo, setLinkVideo] = useState<string>()
+
+    async function trailerID(id) {
+        const URL = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=7bd8468dd9add6745a48f0808ba6f1db&language=pt-BR`
+        let res = await fetch(URL)
+        let data = await res.json()
+        let trailerLink = data.results[0].key
+
+        const VideoURL = `https://www.themoviedb.org/video/play?key=${trailerLink}`
+        res = await fetch(URL)
+        data = await res.json()
+        console.log(data.results[0].key)
+        setLinkVideo(data.results[0].key)
+        setShowModal(!showModal)
     }
 
     return (
-        <ContainerStyled>
-            <ContainerPanelStyled isFocused={isFocused}>
-                <PanelStyled
-                tabIndex={0}
-                    onMouseEnter={onFocusHandle}
-                    onMouseLeave={() => setFocused(false)}
-                >
-                    <img src={img} />
-                    <ContainerTitleStyled>
-                        <h1>Toy Story</h1>
-                        <ContainerSubtitleStyled >
-                            <p>Animação</p>
-                            <p>1995</p>
-                        </ContainerSubtitleStyled>
-                    </ContainerTitleStyled>
-                    <ContainerBottomStyled isFocused={isFocused}>
-                        <ContainerDescribeStyled>
-                            <CirclePlay />
-                            <div className='container_edicao'>
-                                <CircleX />
-                                <SquarePen />
-                            </div>
-                        </ContainerDescribeStyled>
-                        <TextDescribeStyled>
-                            Em um mundo onde os brinquedos são seres vivos que fingem não ter vida quando os humanos estão por perto, um boneco cauboi de pano chamado Xerife Woody é o brinquedo favorito de Andy Davis,
-                            um garoto de seis anos.
-                        </TextDescribeStyled>
-                    </ContainerBottomStyled>
-                </PanelStyled>
-            </ContainerPanelStyled>
-        </ContainerStyled>
+        <>
+            <ContainerStyled>
+                <ContainerPanelStyled isfocused={isfocused ? 1 : 0}>
+                    <PanelStyled
+                        tabIndex={0}
+                        onMouseEnter={() => setFocused(true)}
+                        onMouseLeave={() => setFocused(false)}
+                    >
+                        <img src={img} />
+                        <ContainerTitleStyled>
+                            <h1>{title}</h1>
+                            <ContainerSubtitleStyled >
+                                <p>{genre}</p>
+                                <p>{ano}</p>
+                            </ContainerSubtitleStyled>
+                        </ContainerTitleStyled>
+                        <ContainerBottomStyled isfocused={isfocused ? 1 : 0}>
+                            <ContainerDescribeStyled>
+                                <CirclePlay onClick={() => trailerID(id)} />
+                                <div className='container_edicao'>
+                                    <CircleX />
+                                    <SquarePen />
+                                </div>
+                            </ContainerDescribeStyled>
+                            <TextDescribeStyled>
+                                {describe}
+                            </TextDescribeStyled>
+                        </ContainerBottomStyled>
+                    </PanelStyled>
+                </ContainerPanelStyled>
+            </ContainerStyled>
+            {showModal &&
+                <DialogStyled open={showModal}>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src={`https://www.youtube.com/embed/${linkVideo}?si=_kJceVPnZL2f_Jga`}
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </DialogStyled>}
+        </>
     )
 }
