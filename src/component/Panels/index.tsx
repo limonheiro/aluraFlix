@@ -35,7 +35,7 @@ export const Panels = () => {
     // }, [movies]);
 
     return (
-        <Container>
+        <Container column={false}>
             { panels }
         </Container>
   )

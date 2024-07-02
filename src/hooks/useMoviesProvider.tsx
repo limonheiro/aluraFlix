@@ -1,8 +1,9 @@
 import { useContext, useMemo, useState } from "react";
-import { MoviesContext } from "../context/MoviesContext";
+import { BD, MoviesContext } from "../context/MoviesContext";
 import { Titulo } from "../component/Titulo";
 import { Panel } from "../component/Panels/Panel";
 import { Container } from "../component/Container";
+
 
 export const useMoviesProvider = () => {
     const context = useContext(MoviesContext)
@@ -13,7 +14,7 @@ export const useMoviesProvider = () => {
 
     const { movies, setMovies } = context
 
-    const [moviesId, setMoviesId] = useState<Array<number>>([])
+    // const [moviesId, setMoviesId] = useState<Array<number>>([])
     const [panels, setPanels] = useState<JSX.Element|JSX.Element[]>([]);
 
 
@@ -36,9 +37,8 @@ export const useMoviesProvider = () => {
                 fetch(`http://localhost:3000/movies?genre_ids_like=${data[0].id}`)
                     .then(res => res.json())
                     .then(async (data) => {
-                        const filterData = data.filter(d => !moviesId.includes(d))
-                        console.log(moviesId)
-                        const panel = await Promise.all(filterData.slice(0, 6).map(async (movie, index) => {
+
+                        const panel = await Promise.all(data.slice(0, 6).map(async (movie:BD) => {
                             const genero = await getGenre(movie.genre_ids[0]);
                                 return (
                                     <>
@@ -60,7 +60,7 @@ export const useMoviesProvider = () => {
                                 {Anterior}
                                 <Container column>
                                     <Titulo>{genre}</Titulo>
-                                    <Container>
+                                    <Container column={false}>
                                         {panel}
                                     </Container>
                                 </Container>

@@ -4,7 +4,7 @@ type MoviesChildren = {
     children: JSX.Element |JSX.Element[] 
 }
 
-type BD = {
+export type BD = {
     backdrop_path:string,
     genre_ids:Array<number>,
     id:number,

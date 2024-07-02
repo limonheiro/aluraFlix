@@ -156,7 +156,7 @@ const DialogStyled = styled.dialog`
 `
 
 type PanelProps = {
-    id: string
+    id: string|number
     title: string
     genre: string
     ano: string
@@ -172,17 +172,17 @@ export const Panel = ({ id, title, genre, ano, describe, img }: PanelProps) => {
     const [showModal, setShowModal] = useState<boolean>(false);
     const [linkVideo, setLinkVideo] = useState<string>()
 
-    async function trailerID(id) {
+    async function trailerID(id:string|number) {
         const URL = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=7bd8468dd9add6745a48f0808ba6f1db&language=pt-BR`
-        let res = await fetch(URL)
-        let data = await res.json()
-        let trailerLink = data.results[0].key
+        const res = await fetch(URL)
+        const data = await res.json()
+        const trailerLink = data.results[0].key
 
-        const VideoURL = `https://www.themoviedb.org/video/play?key=${trailerLink}`
-        res = await fetch(URL)
-        data = await res.json()
-        console.log(data.results[0].key)
-        setLinkVideo(data.results[0].key)
+        // const VideoURL = `https://www.themoviedb.org/video/play?key=${trailerLink}`
+        // res = await fetch(URL)
+        // data = await res.json()
+        // console.log(data.results[0].key)
+        setLinkVideo(trailerLink)
         setShowModal(!showModal)
     }
 
@@ -225,9 +225,8 @@ export const Panel = ({ id, title, genre, ano, describe, img }: PanelProps) => {
                         height="315"
                         src={`https://www.youtube.com/embed/${linkVideo}?si=_kJceVPnZL2f_Jga`}
                         title="YouTube video player"
-                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    >
                     </iframe>
                 </DialogStyled>}
         </>
