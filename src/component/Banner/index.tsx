@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { CirclePlus } from 'lucide-react';
-import img from '../../assets/img/madMax.jpg'
+import img from '../../assets/img/madMax-700.webp'
 import { useState } from 'react';
 import { DialogStyled, OverlayStyled } from '../Dialog';
 import { useMoviesProvider } from '../../hooks/useMoviesProvider';
