@@ -3,6 +3,7 @@ import { BD, MoviesContext } from "../context/MoviesContext";
 import { Titulo } from "../component/Titulo";
 import { Panel } from "../component/Panels/Panel";
 import { Container } from "../component/Container";
+import { nanoid } from 'nanoid'
 import styled from "styled-components";
 
 export type allGenres = {
@@ -15,7 +16,7 @@ export type GenreType = {
     setAllGenres: React.Dispatch<React.SetStateAction<allGenres[]>>
 }
 
-const NewVideoStyled = styled.div`
+export const NewVideoStyled = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -37,7 +38,7 @@ export const useMoviesProvider = () => {
     const { movies, setMovies } = context
 
     const [panels, setPanels] = useState<JSX.Element | JSX.Element[]>([]);
-    const [allGenres, setAllGenres] = useState<allGenres[]|never[]>([]);
+    const [allGenres, setAllGenres] = useState<allGenres[] | never[]>([]);
 
     useMemo(() => {
         async function listAllGenre() {
@@ -45,7 +46,6 @@ export const useMoviesProvider = () => {
             const res = await fetch(URL)
             const data = await res.json()
             setAllGenres(Anterior => data !== undefined ? data : Anterior)
-            console.log(data)
         }
         listAllGenre()
     }, [])
@@ -65,22 +65,21 @@ export const useMoviesProvider = () => {
         const res = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?nome=${genre}`)
         const data = await res.json()
         const id = Number(data[0].id)
-        // return `?genre_ids_like=${id}`
         return `?genre_ids=${id}`
     }
 
     const Seccao = async (genre: string, newVideo?: true | false | undefined) => {
+
         const data = newVideo ? '?new=true' : await getIdGenre(genre)
-        console.log(data)
         fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies${data}`)
             .then(res => res.json())
             .then(async (data) => {
                 const panel = await Promise.all(data.slice(0, 6).map(async (movie: BD) => {
                     const genero = await getGenreMovie(movie.genre_ids[0]);
                     return (
-                        <>
+                        <React.Fragment key={nanoid()}>
                             <Panel
-                                key={movie.id}
+                                key={nanoid()}
                                 id={movie.id}
                                 title={movie.title}
                                 genre={genero}
@@ -90,21 +89,24 @@ export const useMoviesProvider = () => {
                                 img={movie.backdrop_path}
                             />
 
-                        </>
+                        </React.Fragment>
                     );
-                }))
-                const ContainerPanel = <>
-                    <Titulo>{genre}</Titulo>
-                    <Container column={false}>
-                        {panel}
-                    </Container></>
+                }));
+                const ContainerPanel = (
+                    <React.Fragment key={nanoid()}>
+                        <Titulo>{genre}</Titulo>
+                        <Container key={nanoid()} $column={!true}>
+                            {panel}
+                        </Container>
+                    </React.Fragment>
+                );
 
                 setPanels(Anterior => {
                     if (newVideo) {
                         return (
                             <>
                                 {Anterior}
-                                <NewVideoStyled>
+                                <NewVideoStyled key={nanoid()}>
                                     {ContainerPanel}
                                 </NewVideoStyled>
                             </>
@@ -113,17 +115,16 @@ export const useMoviesProvider = () => {
                         return (
                             <>
                                 {Anterior}
-                                <Container column>
+                                <Container key={nanoid()} $column={(!false)}>
                                     {ContainerPanel}
                                 </Container>
                             </>
-                        )
+                        );
                     }
-                }
-                )
-            })
+                });
+            });
 
-    }
+    };
 
     return {
         movies,
@@ -133,5 +134,5 @@ export const useMoviesProvider = () => {
         getGenreMovie,
         allGenres,
         Seccao
-    }
+    };
 }

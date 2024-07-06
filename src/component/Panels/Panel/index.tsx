@@ -8,7 +8,7 @@ import { useMoviesProvider } from '../../../hooks/useMoviesProvider';
 import { Form } from '../../Form';
 
 type PanelVar = {
-    isfocused: number
+    $isfocused: boolean
 }
 
 const blurStyled = css`
@@ -35,8 +35,8 @@ const ContainerPanelStyled = styled.div<PanelVar>`
     width: 100%;
     height: 100%;
 
-    ${({ isfocused }) => {
-        return isfocused && blurStyled
+    ${({ $isfocused }) => {
+        return $isfocused && blurStyled
     }}
 
 `
@@ -49,6 +49,7 @@ const PanelStyled = styled.div`
     /* position: absolute; */
     img{
        width:100%; 
+       height: 100%;
        object-fit:cover;
     }
 `
@@ -62,18 +63,18 @@ const displayStyle = css`
 
 const ContainerBottomStyled = styled.div<PanelVar>`
     display: none;
+    min-width: 280px;
+    /* max-width: 280px; */
     flex-direction: column;
     height:150px;
     background: #fff;
-    padding-left: 8px;
     position: absolute;
     z-index: 5;
     top: 100%;
     padding-top: 5px;
-    margin-top: 4px;
 
-    ${({ isfocused }) => {
-        return isfocused && [displayStyle, blurStyled]
+    ${({ $isfocused }) => {
+        return $isfocused && [displayStyle, blurStyled]
     }}
 
     @media screen and (max-width: 801px) {
@@ -113,6 +114,7 @@ const ContainerSubtitleStyled = styled.div`
     gap: 8px;
     text-align: left;
     text-shadow: black 0.1rem 0.1rem 2rem;
+    margin-bottom: 0.5rem;
 
     :first-child{
         flex-shrink: 9;
@@ -164,8 +166,6 @@ const TextDescribeStyled = styled.p`
     overflow: auto;
 
     scrollbar-width: thin;
-
-
     padding: 0 16px 16px 8px;
     line-height: 1.3;
 `
@@ -198,26 +198,34 @@ export const Panel = ({ id, title, genre, genre_ids, ano, describe, img }: Panel
         const data = await res.json()
         if (data.results[0]) {
             const trailerLink = data.results[0].key
-            console.log(data)
             setLinkVideo(trailerLink)
         }
         setShowModal(!showModal)
     }
 
-    function deleteData(id: string | number) {
-        fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies/${id}`, {
+    async function deleteData(id: number | string) {
+        // debugger
+        const URL = `https://668480d656e7503d1ae06de1.mockapi.io/movies/${id}`
+        // alert(URL)
+        await fetch(URL, {
             method: 'DELETE',
             headers: {
+                'Access-Control-Allow-Headers': 'X-Requested-With,Content-Type,Cache-Control,access_token',
                 'Content-Type': 'application/json'
             }
+        }).catch(error => {
+            console.error(error)
+            alert(error)
+            return "indefinido"
         })
+        window.location.reload();
 
     }
 
     return (
         <>
             <ContainerStyled>
-                <ContainerPanelStyled isfocused={isfocused ? 1 : 0}>
+                <ContainerPanelStyled $isfocused={isfocused}>
                     <PanelStyled
                         tabIndex={0}
                         onClick={() => setFocused(true)}
@@ -234,7 +242,7 @@ export const Panel = ({ id, title, genre, genre_ids, ano, describe, img }: Panel
                                 <p>{ano.split('-')[0]}</p>
                             </ContainerSubtitleStyled>
                         </ContainerTitleStyled>
-                        <ContainerBottomStyled isfocused={isfocused ? 1 : 0}>
+                        <ContainerBottomStyled $isfocused={isfocused}>
                             <ContainerDescribeStyled>
                                 <CirclePlay
                                     onTouchStart={() => trailerID(id)}
@@ -266,7 +274,6 @@ export const Panel = ({ id, title, genre, genre_ids, ano, describe, img }: Panel
                             <div className='container_buttons'>
                                 <button className='delele' onClick={() => {
                                     deleteData(id)
-                                    window.location.reload();
                                 }}>Deletar</button>
                                 <button onClick={() => setDeleteModal(!deleteModal)}>Cancelar</button>
                             </div>

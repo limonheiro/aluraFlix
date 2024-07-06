@@ -8,7 +8,6 @@ import { Footer } from "./component/Footer"
 const PanelStyled = styled.div`
   display: flex;
   flex-direction: column;
-  /* gap: 16px; */
 `
 
 function App() {
