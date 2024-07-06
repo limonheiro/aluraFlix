@@ -1,11 +1,16 @@
 import styled from 'styled-components'
+import { CirclePlus } from 'lucide-react';
 import img from '../../assets/img/madMax.jpg'
+import { useState } from 'react';
+import { DialogStyled, OverlayStyled } from '../Dialog';
+import { useMoviesProvider } from '../../hooks/useMoviesProvider';
+import { Form } from '../Form';
 
-const BannerStyled = styled.div<{image:string}>`
+const BannerStyled = styled.div<{ image: string }>`
     display: flex;
     flex-direction: column;
     min-height: 350px;
-    width:100vw;
+    /* width:100vw; */
     max-width: 100%;
     align-items: center;
     height: 516px;
@@ -20,15 +25,17 @@ const ContainerBannerStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     height: 100%;
 
     nav{
         padding-top: 0.5rem;
         display:flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items:center;
         text-align:center;
+        align-content: center;
     }
     nav>a{
         text-decoration:none;
@@ -36,6 +43,8 @@ const ContainerBannerStyled = styled.div`
         font-weight:200;
         font-size:64px;
         align-self: center;
+        flex-grow: 1;
+
     }
 
     p{
@@ -44,19 +53,57 @@ const ContainerBannerStyled = styled.div`
         padding: 2rem;
         align-self: first baseline;
     }
+
+    .lucide{
+        margin-top: 0.5rem;
+        align-self: center;
+        align-content: flex-end;
+        width: 40px;
+        height: 40px;
+        padding-right: 2rem;
+        cursor: pointer;
+    }
 `
 
 export const Banner = () => {
-  return (
-    <BannerStyled image={img}>
-        <ContainerBannerStyled>
-            <nav>
-                <a href='#'>AluraFlix</a>
-            </nav>
-            <p className='bg_title'>
-                Mad Max
-            </p>
-        </ContainerBannerStyled>
-    </BannerStyled>
-  )
+    const [addMovie, setAddMovie] = useState<boolean>(false)
+    const [genreIds, setGenreIds] = useState<Array<number>>([])
+    const { allGenres } = useMoviesProvider()
+    return (
+        <>
+            <BannerStyled image={img}>
+                <ContainerBannerStyled>
+                    <nav>
+                        <a href='#'>AluraFlix</a>
+                        <CirclePlus onClick={() => setAddMovie(!addMovie)} />
+                    </nav>
+                    {/* <p className='bg_title'>
+                        Mad Max
+                    </p> */}
+                </ContainerBannerStyled>
+            </BannerStyled>
+
+            {addMovie &&
+                <>
+                    <OverlayStyled onClick={() => setAddMovie(!addMovie)} />
+                    <DialogStyled form={true} open={addMovie}>
+                        <Form
+                            tituloForm="Formulario para"
+                            title=''
+                            buttonText="Enviar"
+                            allGenres={allGenres}
+                            genreIds={genreIds}
+                            setGenreId={setGenreIds}
+                            ano=''
+                            img=''
+                            describe=''
+                            setModal={() => setAddMovie(!addMovie)}
+                            newFilme={true}
+                        />
+                    </DialogStyled>
+                </>
+            }
+        </>
+
+    )
 }

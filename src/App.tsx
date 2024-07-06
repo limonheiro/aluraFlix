@@ -15,8 +15,8 @@ function App() {
   return (
     <>
     <GlobalStyled/>
-    <Banner/>
     <MoviesProvider>
+    <Banner/>
     <PanelStyled>
       <Panels/>
     </PanelStyled>

@@ -1,42 +1,39 @@
 import { useMemo } from 'react'
-import {useMoviesProvider} from '../../hooks/useMoviesProvider'
-import { Container } from '../Container';
+import { useMoviesProvider } from '../../hooks/useMoviesProvider'
+import styled from 'styled-components';
 
+const PanelStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+`
+
+const SeccaoStyled = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.25rem 1rem 2rem 1rem;
+    align-items: center;
+    text-transform: capitalize;
+    justify-content: normal;
+`
 
 export const Panels = () => {
-    const {panels,Seccao} = useMoviesProvider()
+    const { panels, Seccao } = useMoviesProvider()
 
-    
-    useMemo(()=>{
+    useMemo(() => {
+        Seccao('Recentes', true)
         Seccao('Família')
         Seccao('Ação')
         Seccao('Terror')
-    },[])
-    
-    // useMemo(() => {
-    //     const fetchGenres = async () => {
-    //         const panelComponents = await Promise.all(movies.map(async (movie, index) => {
-    //             const genre = await getGenre(movie.genre_ids[0]);
-    //             return (
-    //                 <Panel 
-    //                     key={movie.id + index}
-    //                     title={movie.title}
-    //                     genre={genre}
-    //                     ano={movie.release_date.split('-')[0]}
-    //                     describe={movie.overview}
-    //                     img={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-    //                 />
-    //             );
-    //         }));
-    //         setPanels(panelComponents);
-    //     };
-        
-    //     fetchGenres();
-    // }, [movies]);
+    }, [])
 
     return (
-        <Container column={false}>
-            { panels }
-        </Container>
-  )
+        <PanelStyled>
+            <SeccaoStyled>
+                {panels}
+            </SeccaoStyled>
+        </PanelStyled>
+    )
 }

@@ -3,6 +3,10 @@ import './reset.css'
 
 export const GlobalStyled = createGlobalStyle`
 
+    :root{
+        scrollbar-width: thin;
+        scrollbar-color: #000 #fff;
+    }
     width: 100%;
 
     .bg_title{
@@ -26,12 +30,14 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     body{
+        font-family: Inter;
         min-width: 350px;
         height: 100%;
         /* width: 100vh; */
         color: #fff;
         display: flex;
         flex-direction: column;
+        
     }
 
 `

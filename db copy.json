@@ -1,0 +1,965 @@
+{
+   "movies": [
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/xg27NrXi7VXCGUr7MG75UqLl6Vg.jpg",
+       "genre_ids": [
+         16,
+         10751,
+         12,
+         35
+       ],
+       "id": 1022789,
+       "original_language": "en",
+       "overview": "\"Divertida Mente 2\", da Disney e da Pixar, retorna à mente da adolescente Riley, e o faz no momento em que a sala de comando está passando por uma demolição repentina para dar lugar a algo totalmente inesperado: novas emoções! Alegria, Tristeza, Raiva, Medo e Nojinho não sabem bem como reagir quando Ansiedade aparece, e tudo indica que ela não está sozinha.",
+       "popularity": 6206.176,
+       "poster_path": "/9h2KgGXSmWigNTn3kQdEFFngj9i.jpg",
+       "release_date": "2024-06-11",
+       "new":false,
+       "title": "Divertida Mente 2"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/wNAhuOZ3Zf84jCIlrcI6JhgmY5q.jpg",
+       "genre_ids": [
+         28,
+         12,
+         878
+       ],
+       "id": 786892,
+       "original_language": "en",
+       "overview": "Quando o mundo entra em colapso, a jovem Furiosa é sequestrada do Green Place das Muitas Mães e cai nas mãos da horda de motoqueiros liderada pelo Senhor da Guerra Dementus. Vagando pelo deserto condenado, eles encontram a Cidadela controlada por Immortan Joe. Enquanto os dois tiranos lutam por poder e controle, Furiosa terá que sobreviver a muitos desafios para encontrar e trilhar o caminho de volta para casa.",
+       "popularity": 7517.207,
+       "poster_path": "/7qOSKoOAPgemYhBwbJgBWcCxPWZ.jpg",
+       "release_date": "2024-05-22",
+       "new":false,
+       "title": "Furiosa: Uma Saga Mad Max"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/fqv8v6AycXKsivp1T5yKtLbGXce.jpg",
+       "genre_ids": [
+         878,
+         12,
+         28
+       ],
+       "id": 653346,
+       "original_language": "en",
+       "overview": "Várias gerações no futuro, após o reinado de César, os macacos são agora a espécie dominante e vivem harmoniosamente, enquanto os humanos foram reduzidos a viver nas sombras. À medida que um novo líder símio tirânico constrói o seu império, um jovem macaco empreende uma jornada angustiante que o levará a questionar tudo o que sabia sobre o passado e a fazer escolhas que definirão um futuro tanto para os macacos como para os humanos.",
+       "popularity": 2861.414,
+       "poster_path": "/dzDK2TMXsxrolGVdZwNGcOlZqrF.jpg",
+       "release_date": "2024-05-08",
+       "new":false,
+       "title": "Planeta dos Macacos: O Reinado"
+     },
+     {
+       "backdrop_path":"/https://image.tmdb.org/t/p/w342fDmci71SMkfZM8RnCuXJVDPaSdE.jpg",
+       "genre_ids":[
+          16,
+          10751,
+          35,
+          28
+       ],
+       "id":519182,
+       "original_language":"en",
+       "overview":"Nesta sequência, o vilão mais amado do planeta retorna e agora Gru, Lucy, Margo, Edith e Agnes dão as boas-vindas a um novo membro da família: Gru Jr., que pretende atormentar seu pai. Enquanto se adapta com o pequeno, Gru enfrenta um novo inimigo, Maxime Le Mal, forçando sua namorada Valentina e a família a fugir do perigo.",
+       "popularity":1193.806,
+       "poster_path":"/65QQjZNrVfTiuGp3chxx8dkfHDG.jpg",
+       "release_date":"2024-06-20",
+       "new":false,
+       "title":"Meu Malvado Favorito 4"
+    },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/gRApXuxWmO2forYTuTmcz5RaNUV.jpg",
+       "genre_ids": [
+         28,
+         80,
+         53,
+         35
+       ],
+       "id": 573435,
+       "original_language": "en",
+       "overview": "Depois que seu falecido ex-capitão é incriminado, Lowrey e Burnett tentam limpar seu nome, apenas para acabarem se tornando os mais procurados de Miami.",
+       "popularity": 1847.274,
+       "poster_path": "/ak6VZDHms5T4p0eFISk336kqjR6.jpg",
+       "release_date": "2024-06-05",
+       "new":false,
+       "title": "Bad Boys: Até o Fim"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/j29ekbcLpBvxnGk6LjdTc2EI5SA.jpg",
+       "genre_ids": [
+         16,
+         10751,
+         12,
+         18,
+         35
+       ],
+       "id": 150540,
+       "original_language": "en",
+       "overview": "Baseadas na Sala de Comando, o centro de controle dentro da mente de Riley de 11 anos, cinco emoções trabalham sem parar, lideradas pela otimista Alegria. Ela se esforça muito para garantir que Riley esteja sempre feliz, e trabalha ao lado do Medo, Raiva, Nojinho e Tristeza.",
+       "popularity": 1915.626,
+       "poster_path": "/62SAZfLfzhxJWUFJvfIPMw6QUpE.jpg",
+       "release_date": "2015-06-17",
+       "new":false,
+       "title": "Divertida Mente"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/aATi2PtaOQCVAquCym6OU0Z4FjY.jpg",
+       "genre_ids": [
+         28,
+         80,
+         53
+       ],
+       "id": 704673,
+       "original_language": "en",
+       "overview": "Uma militar de elite descobre uma perigosa conspiração ao retornar à cidade natal em busca de respostas para a morte do pai.",
+       "popularity": 1827.574,
+       "poster_path": "/cQLJT6hTXio0md94oBsSWADOECf.jpg",
+       "release_date": "2024-06-20",
+       "new":false,
+       "title": "Alerta de Risco"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/jvPMJ2zM92jfXxVEFsqP1MMrLaO.jpg",
+       "genre_ids": [
+         878,
+         28,
+         12
+       ],
+       "id": 823464,
+       "original_language": "en",
+       "overview": "O poderoso Kong e o temível Godzilla se unem contra uma colossal ameaça mortal escondida no mundo dos humanos, que ameaça a existência de sua espécie e da nossa. Mergulhando profundamente nos mistérios da Ilha da Caveira e nas origens da Terra Oca, o filme irá explorar a antiga batalha de Titãs que ajudou a forjar esses seres extraordinários e os ligou à humanidade para sempre.",
+       "popularity": 1529.5,
+       "poster_path": "/kO6K9zEsKhNyqcrdGTSqAI6jrie.jpg",
+       "release_date": "2024-03-27",
+       "new":false,
+       "title": "Godzilla e Kong: O Novo Império"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/iTWrsOVsUqcwYSxrpINNs3hG2nC.jpg",
+       "genre_ids": [
+         53,
+         27,
+         28,
+         9648
+       ],
+       "id": 1001311,
+       "original_language": "fr",
+       "overview": "Um tubarão gigante apareceu no rio Sena, em Paris. Para evitar a catástrofe, uma cientista vai ter que encarar as tragédias do próprio passado.",
+       "popularity": 1517.199,
+       "poster_path": "/njsyAXtUcPjLCjOfGvtNLH4DHL2.jpg",
+       "release_date": "2024-06-05",
+       "new":false,
+       "title": "Sob as Águas do Sena"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/fZv4EldEPurSz0d2uVIoL4Sng8x.jpg",
+       "genre_ids": [
+         28,
+         18,
+         53
+       ],
+       "id": 1016346,
+       "original_language": "bn",
+       "overview": "Com Frank Grillo. Um espião de elite de Bangladesh e um agente da CIA formam uma aliança improvável para deter um império do crime implacável liderado por um magnata inescrupuloso.",
+       "popularity": 1464.699,
+       "poster_path": "/8Js658DZ6zaY135wpRnINGuTPOL.jpg",
+       "release_date": "2023-08-25",
+       "new":false,
+       "title": "MR-9: Missão Mortal"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/2RVcJbWFmICRDsVxRI8F5xRmRsK.jpg",
+       "genre_ids": [
+         27,
+         878,
+         53
+       ],
+       "id": 762441,
+       "original_language": "en",
+       "overview": "Um prequel que conta a origem das criaturas de \"Um Lugar Silencioso\".",
+       "popularity": 1522.965,
+       "poster_path": "/gyEnhITeHLky85XJxuTPqniPrzE.jpg",
+       "release_date": "2024-06-26",
+       "new":false,
+       "title": "Um Lugar Silencioso: Dia Um"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/z121dSTR7PY9KxKuvwiIFSYW8cf.jpg",
+       "genre_ids": [
+         10752,
+         28,
+         18
+       ],
+       "id": 929590,
+       "original_language": "en",
+       "overview": "Em um futuro não tão distante, quando uma guerra civil se instaura nos Estados Unidos, uma equipe pioneira de jornalistas de guerra viaja pelo país para registrar a dimensão e a situação de um cenário violento que tomou as ruas em uma rápida escalada, envolvendo toda a nação. No entanto, o trabalho de registro se transforma em uma guerra de sobrevivência quando eles também se tornam o alvo.",
+       "popularity": 1330.014,
+       "poster_path": "/3Use5sOQWXL3BvcaKqUH7eQ7I53.jpg",
+       "release_date": "2024-04-10",
+       "new":false,
+       "title": "Guerra Civil"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/whnFKx0Y54Ktg6o2TiwbnQfXdZf.jpg",
+       "genre_ids": [
+         27,
+         9648,
+         14
+       ],
+       "id": 1086747,
+       "original_language": "en",
+       "overview": "Mina, uma artista de 28 anos, que se perde em uma imensa e assustadora floresta natural no oeste da Irlanda. Quando Mina finalmente encontra abrigo, ela acaba presa ao lado de três estranhos que são vigiados e perseguidos por criaturas misteriosas todas as noites.",
+       "popularity": 1275.524,
+       "poster_path": "/jFpsKOCppRvwP0Igwp0F0Xu1RBJ.jpg",
+       "release_date": "2024-06-06",
+       "new":false,
+       "title": "Os Observadores"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/vpWVeIMNi0Np5shuKFE3QkneiTt.jpg",
+       "genre_ids": [
+         35,
+         14,
+         10751
+       ],
+       "id": 639720,
+       "original_language": "en",
+       "overview": "Depois de descobrir que pode ver os amigos imaginários de todos, uma garota embarca em uma aventura mágica para reconectar amigos imaginários esquecidos.",
+       "popularity": 1103.624,
+       "poster_path": "/xNSsIyZcbESWBm42VTo09zbjS6s.jpg",
+       "release_date": "2024-05-08",
+       "new":false,
+       "title": "Amigos Imaginários"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/w2zsNG7WKBMH35QqcFYILEAdYDU.jpg",
+       "genre_ids": [
+         14,
+         12,
+         10751
+       ],
+       "id": 1026999,
+       "original_language": "pl",
+       "overview": "Em busca do pai desaparecido, uma garota comum aceita estudar em uma universidade mágica, comandada por um professor muito excêntrico.",
+       "popularity": 1011.805,
+       "poster_path": "/ykZvwO1YvWCTV4XajuYBUXeubHA.jpg",
+       "release_date": "2024-01-05",
+       "new":false,
+       "title": "A Academia do Sr. Kleks"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/vblTCXOWUQGSc837vgbhDRi4HSc.jpg",
+       "genre_ids": [
+         28,
+         80,
+         35,
+         53
+       ],
+       "id": 955555,
+       "original_language": "ko",
+       "overview": "Segue o detetive Ma Seok Do e uma gangue em Geumcheon-seo, que estão tentando limpar crimes de drogas em Incheon.",
+       "popularity": 941.656,
+       "poster_path": "/kPtNokhBtgwSp3MHaR3X4O0SPbF.jpg",
+       "release_date": "2023-05-31",
+       "new":false,
+       "title": "The Round Up: No Way Out"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/yHEFwHkU2NqRxBrAoGBfuhuqIL1.jpg",
+       "genre_ids": [
+         35,
+         28
+       ],
+       "id": 1143019,
+       "original_language": "fr",
+       "overview": "Enquanto uma gangue de ladrões semeia o caos em Paris e humilha a polícia há meses, o Ministro do Interior quer sangue novo para liderar a investigação: Alia, explosiva e incontrolável, Hugo, orador da turma e meticuloso.",
+       "popularity": 1114.56,
+       "poster_path": "/jEjVWSz1hhVCO5Ab5QId90m6AfW.jpg",
+       "release_date": "2024-06-20",
+       "new":false,
+       "title": "Os Infalíveis"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/kYgQzzjNis5jJalYtIHgrom0gOx.jpg",
+       "genre_ids": [
+         16,
+         28,
+         10751,
+         35,
+         14
+       ],
+       "id": 1011985,
+       "original_language": "en",
+       "overview": "Po está prestes a se tornar o novo líder espiritual do Vale da Paz, mas antes que possa fazer isso, ele deve encontrar um sucessor para se tornar o novo Dragão Guerreiro.  Ele parece encontrar uma em Zhen, uma raposa com muitas habilidades promissoras, mas que não gosta muito da ideia de Po treiná-la.",
+       "popularity": 960.581,
+       "poster_path": "/sCG0NZiBeHM0FYs1eDhJNPgrFYa.jpg",
+       "release_date": "2024-03-02",
+       "new":false,
+       "title": "Kung Fu Panda 4"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/g5Ha2DhXIuxsUl4gaDnbw3jOAlo.jpg",
+       "genre_ids": [
+         28
+       ],
+       "id": 1115623,
+       "original_language": "en",
+       "overview": "Michael Rivers, que é um habilidoso artista marcial e é forçado a lutar em um torneio de luta ilegal para salvar sua filha. Ao longo de sua jornada ele descobre que outros artistas marciais foram forçados a lutar para salvar seus entes queridos.",
+       "popularity": 858.691,
+       "poster_path": "/zDkaJgsPoSqa2cMe2hW2HAfyWwO.jpg",
+       "release_date": "2024-05-09",
+       "new":false,
+       "title": "The Last Kumite"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/3TNSoa0UHGEzEz5ndXGjJVKo8RJ.jpg",
+       "genre_ids": [
+         878,
+         28
+       ],
+       "id": 614933,
+       "original_language": "en",
+       "overview": "Uma brilhante analista em contraterrorismo não confia em inteligência artificial, mas precisa usá-la quando a missão para capturar um robô rebelde dá errado.",
+       "popularity": 807.255,
+       "poster_path": "/bcM2Tl5HlsvPBnL8DKP9Ie6vU4r.jpg",
+       "release_date": "2024-05-23",
+       "new":false,
+       "title": "Atlas"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/pPUSCLKQLSUCMVmku7tX4QrjCI8.jpg",
+       "genre_ids": [
+         16,
+         28,
+         12,
+         35,
+         10751
+       ],
+       "id": 1280768,
+       "original_language": "en",
+       "overview": "Lincoln e os Louds estão animados para receber sua nova avó, Myrtle, na família, com uma festa de casamento tropical. Mas a comemoração é interrompida quando um velho inimigo do passado de Myrtle como agente secreta aparece na ilha.",
+       "popularity": 802.491,
+       "poster_path": "/eXVflCGYGUbNSN4TmkLqQqM1rXc.jpg",
+       "release_date": "2024-06-21",
+       "new":false,
+       "title": "Loud House: Sem Tempo Para Espionar"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/H5HjE7Xb9N09rbWn1zBfxgI8uz.jpg",
+       "genre_ids": [
+         28,
+         35
+       ],
+       "id": 746036,
+       "original_language": "en",
+       "overview": "Colt é um dublê que tem uma tremenda queda pela diretora do filme que está filmando. As coisas começam a dar errado quando o ator principal do filme desaparece.",
+       "popularity": 765.384,
+       "poster_path": "/7AkiDy6DVlfhJusglf6tvifX6dB.jpg",
+       "release_date": "2024-04-24",
+       "new":false,
+       "title": "O Dublê"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/gGmf3CyHdXvaZtcun0DvU1WSNft.jpg",
+       "genre_ids": [
+         28,
+         14,
+         12
+       ],
+       "id": 626412,
+       "original_language": "ko",
+       "overview": "",
+       "popularity": 730.281,
+       "poster_path": "/3l04H9ljNegDGG9gnKDhLExJvpz.jpg",
+       "release_date": "2024-01-10",
+       "new":false,
+       "title": "외계+인 2부"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/uICcnsfkXTZOEDzFeazppwBienH.jpg",
+       "genre_ids": [
+         27,
+         53
+       ],
+       "id": 1134433,
+       "original_language": "th",
+       "overview": "Depois que o irmão mais velho voltou para sua cidade natal, ele precisa encontrar uma maneira de salvar sua irmã mais nova de uma doença bizarra que está fazendo com que ela se comporte de maneira diferente.",
+       "popularity": 699.395,
+       "poster_path": "/wmenjROhs4AI4vDBmSVy3d1tLL7.jpg",
+       "release_date": "2023-10-25",
+       "new":false,
+       "title": "Quando a Morte Sussurra"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/SI22DaQXIfDvLrNBHGpSVShrsC.jpg",
+       "genre_ids": [
+         16,
+         878,
+         10751,
+         28
+       ],
+       "id": 829402,
+       "original_language": "en",
+       "overview": "Um atleta de sucesso volta à sua terra natal para assumir o papel do pai e se tornar o lendário Ultraman, protegendo Tóquio de monstros gigantes.",
+       "popularity": 680.727,
+       "poster_path": "/aQ2MhjWQtVOTDbqKvIkQp0xXjtv.jpg",
+       "release_date": "2024-06-14",
+       "new":false,
+       "title": "Ultraman: A Ascensão"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/iafs5DG5fGq7ef0acl3xlX4BFrs.jpg",
+       "genre_ids": [
+         18,
+         10770
+       ],
+       "id": 1219685,
+       "original_language": "fr",
+       "overview": "",
+       "popularity": 637.114,
+       "poster_path": "/4xJd3uwtL1vCuZgEfEc8JXI9Uyx.jpg",
+       "release_date": "2024-04-21",
+       "new":false,
+       "title": "Un père idéal"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
+       "genre_ids": [
+         878,
+         12
+       ],
+       "id": 693134,
+       "original_language": "en",
+       "overview": "A jornada de Paul Atreides continua. Ele está determinado a buscar vingança contra aqueles que destruíram sua família e seu lar. Com a ajuda de Chani e dos Fremen, ele embarca em uma jornada espiritual, mística e marcial. Se torna Muad'Dib, o líder messiânico dos Fremen, enquanto luta para evitar um futuro sombrio que ele testemunhou em visões. No entanto, suas ações inadvertidamente desencadeiam uma Guerra Santa em seu nome, que se espalha pelo universo conhecido. Enquanto enfrenta escolhas difíceis entre o amor por Chani e o destino de seu povo, Paul precisa usar suas habilidades e conhecimentos para evitar o terrível futuro que previu.",
+       "popularity": 602.817,
+       "poster_path": "/e8pI4XkYgUMuSJ8cEFbJE18wc4e.jpg",
+       "release_date": "2024-02-27",
+       "new":false,
+       "title": "Duna: Parte Dois"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/k9X79JC2dDTcSpxuKJ3p2Teq3oZ.jpg",
+       "genre_ids": [
+         878,
+         28,
+         12
+       ],
+       "id": 1025463,
+       "original_language": "pt",
+       "overview": "Em um futuro distópico em que as próteses robóticas dominam os esportes, duas irmãs competem no salto em distância. Só que essa rivalidade leva a um caminho sinistro.",
+       "popularity": 586.835,
+       "poster_path": "/ns9Tr9fda1YuPK2k6BqwqmEOkgl.jpg",
+       "release_date": "2024-05-28",
+       "new":false,
+       "title": "Biônicos"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/2KGxQFV9Wp1MshPBf8BuqWUgVAz.jpg",
+       "genre_ids": [
+         16,
+         28,
+         12,
+         35,
+         10751
+       ],
+       "id": 940551,
+       "original_language": "en",
+       "overview": "A família Mallard está um pouco refém da rotina. Enquanto Mack, o pai, se contenta em manter sua família segura nos arredores de um lago da Nova Inglaterra para sempre, Pam, a mãe, está ansiosa para agitar as coisas e mostrar a seus filhos – o adolescente Dax e a patinha Gwen – o mundo inteiro. Quando uma família de patos migratórios aterrissa em seu lago com histórias emocionantes de lugares distantes, Pam convence Mack a embarcar em uma viagem em família, via Nova York, para a Jamaica tropical.",
+       "popularity": 568.86,
+       "poster_path": "/wXWnUhdnSuADRp9w7aAZNHx682v.jpg",
+       "release_date": "2023-12-06",
+       "new":false,
+       "title": "Patos!"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/eAIHqfS3kXm7kZl4j7ZBfdegyEz.jpg",
+       "genre_ids": [
+         53,
+         28,
+         80
+       ],
+       "id": 38700,
+       "original_language": "en",
+       "overview": "Marcus Burnett agora é um inspetor e Mike Lowrey se encontra numa crise de meia-idade. Mas a dupla tem que se juntar novamente quando um mercenário albanês, cujo irmão foi capturado por eles, promete um bônus de vingança justamente quando eles estão prestes a se aposentar.",
+       "popularity": 565.342,
+       "poster_path": "/lkWYrzLIclGj56r4NJxuWeisK9R.jpg",
+       "release_date": "2020-01-15",
+       "new":false,
+       "title": "Bad Boys Para Sempre"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/xBgfaCiDwfPH73p2VEo1O4tkHek.jpg",
+       "genre_ids": [
+         27,
+         9648,
+         53,
+         18,
+         878
+       ],
+       "id": 1058638,
+       "original_language": "en",
+       "overview": "Uma técnica de necrotério reanima com sucesso o corpo de uma menina, mas para mantê-la respirando, ela precisará colher materiais biológicos de mulheres grávidas.",
+       "popularity": 564.784,
+       "poster_path": "/qjjwYBk21klwdD86bxPro54qqaC.jpg",
+       "release_date": "2023-08-18",
+       "new":false,
+       "title": "(Re)Nascer"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/vWzJDjLPmycnQ42IppEjMpIhrhc.jpg",
+       "genre_ids": [
+         16,
+         35,
+         10751,
+         12
+       ],
+       "id": 748783,
+       "original_language": "en",
+       "overview": "Garfield, o mundialmente famoso gato de interior que odeia segundas-feiras e adora lasanha, está prestes a ter uma aventura selvagem ao ar livre! Depois de um reencontro inesperado com seu pai há muito perdido – o desalinhado gato de rua Vic – Garfield e seu amigo canino Odie são forçados a deixar sua vida perfeitamente mimada para se juntarem a Vic em um assalto hilariante e de alto risco.",
+       "popularity": 554.852,
+       "poster_path": "/rC5RqXtFoTkBhNWE1dczwi4dZrX.jpg",
+       "release_date": "2024-04-30",
+       "new":false,
+       "title": "Garfield - Fora de Casa"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/11G6N5zW0KykVS0EcNKeXHUmQj8.jpg",
+       "genre_ids": [
+         10752
+       ],
+       "id": 1136318,
+       "original_language": "en",
+       "overview": "Um jovem piloto é chamado para defender o espaço aéreo da Grã-Bretanha contra o ataque da Alemanha nazista. Sem a menor possiblidade de se render, ele lutará pela honra de seus companheiros e pelo futuro da nação.",
+       "popularity": 543.367,
+       "poster_path": "/8aRl9fIIjCiOc7dREwcXSEmKbQS.jpg",
+       "release_date": "2023-12-01",
+       "new":false,
+       "title": "Batalha Aérea"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/tkHQ7tnYYUEnqlrKuhufIsSVToU.jpg",
+       "genre_ids": [
+         27
+       ],
+       "id": 437342,
+       "original_language": "en",
+       "overview": "Uma mulher começa a questionar a sua própria fé quando descobre uma terrível conspiração para provocar o nascimento do mal encarnado em Roma.",
+       "popularity": 537.103,
+       "poster_path": "/tINXSJfPiVGrTZTHFz5TFDh6SeX.jpg",
+       "release_date": "2024-04-03",
+       "new":false,
+       "title": "A Primeira Profecia"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/xp3FD8TiDuU35kGySvmFtCi6xZy.jpg",
+       "genre_ids": [
+         878,
+         27
+       ],
+       "id": 1189205,
+       "original_language": "en",
+       "overview": "Dois cientistas enfrentam uma tragédia após descobrirem um meteorito no Ártico. A única sobrevivente é levada para uma base próxima. Enquanto a equipe tenta desvendar o mistério, descobrem que a verdadeira ameaça pode estar entre eles.",
+       "popularity": 529.274,
+       "poster_path": "/rzQyBZVPJm2JRRifwZvrRZVwq6z.jpg",
+       "release_date": "2023-10-06",
+       "new":false,
+       "title": "Mistério no Ártico"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/2yFMZYVNeyLnj8NV7T5HKIFFNf6.jpg",
+       "genre_ids": [
+         27
+       ],
+       "id": 1031516,
+       "original_language": "es",
+       "overview": "Depois de acordar em um hospital psiquiátrico, sem se lembrar de como foi parar lá, uma mulher tem visões assustadoras e tenta, desesperadamente, fugir delas.",
+       "popularity": 527.129,
+       "poster_path": "/aG68lR36HbEASelSpwK7PHi8N9H.jpg",
+       "release_date": "2023-07-24",
+       "new":false,
+       "title": "Visões Mortais"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/zs2S0D4sZMNbOKgs4LyZAxiX9eY.jpg",
+       "genre_ids": [
+         27,
+         14,
+         18,
+         9648,
+         53
+       ],
+       "id": 1197830,
+       "original_language": "en",
+       "overview": "",
+       "popularity": 516.132,
+       "poster_path": "/nJMNvYZ21bMdB2Pq0qCk88jnQc6.jpg",
+       "release_date": "2024-06-11",
+       "new":false,
+       "title": "Wild Eyed and Wicked"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/4woSOUD0equAYzvwhWBHIJDCM88.jpg",
+       "genre_ids": [
+         28,
+         27,
+         53
+       ],
+       "id": 1096197,
+       "original_language": "en",
+       "overview": "Um grupo de desconhecidos acabam no meio do Oceano Pacífico depois de um acidente aéreo. Presos em uma bolsa de ar, eles devem trabalhar juntos para enfrentar os perigos que os cercam antes que o oxigênio acabe.",
+       "popularity": 507.36,
+       "poster_path": "/ktxq0LYgl41I2DUn49TYIaS9dZR.jpg",
+       "release_date": "2024-01-18",
+       "new":false,
+       "title": "Desespero Profundo"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/gqrnQA6Xppdl8vIb2eJc58VC1tW.jpg",
+       "genre_ids": [
+         28,
+         12,
+         878
+       ],
+       "id": 76341,
+       "original_language": "en",
+       "overview": "Em um mundo apocalíptico, Max Rockatansky acredita que a melhor forma de sobreviver é não depender de ninguém. Porém, após ser capturado pelo tirano Immortan Joe e seus rebeldes, Max se vê no meio de uma guerra mortal, iniciada pela imperatriz Furiosa que tenta salvar um grupo de garotas. Também tentando fugir, Max aceita ajudar Furiosa. Dessa vez, o tirano Joe está ainda mais implacável pois teve algo insubstituível roubado.",
+       "popularity": 506.63,
+       "poster_path": "/mtgqrSlT47VsmeMVanLTny7BknB.jpg",
+       "release_date": "2015-05-13",
+       "new":false,
+       "title": "Mad Max: Estrada da Fúria"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/inkZkJDWP4jb8k14d1hOi56QciE.jpg",
+       "genre_ids": [
+         35,
+         10749
+       ],
+       "id": 1181237,
+       "original_language": "pt",
+       "overview": "Baseado no livro de Cris Souza Fontes, Apaixonada conta a história de uma mulher que percebe o quanto sua vida é monótona. Ela se vê desesperada e diante de uma crise de identidade. A partir daí, ela se vê obrigada a dar início a uma jornada emocionante de autoconhecimento que a leva próximo de todas as paixões que a vida é capaz de oferecer. ",
+       "popularity": 114.884,
+       "poster_path": "/ih0G409JNF8L7Maz3tQwPnLOjD7.jpg",
+       "release_date": "2024-03-07",
+       "new":false,
+       "title": "Apaixonada"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/5kUnTUAt6g4fXUpqbX8dnIJ5b6c.jpg",
+       "genre_ids": [
+         12
+       ],
+       "id": 1209095,
+       "original_language": "pt",
+       "overview": "Roni ganha um relógio mágico e vai parar num vilarejo enfeitiçado, onde as crianças estão desaparecendo. Junto com seus amigos, ele tem que enfrentar o poderoso Perpétuo e salvar Cronópolis.",
+       "popularity": 83.265,
+       "poster_path": "/pj5L9BlAQWN8y3YJsxnMAI6cVo3.jpg",
+       "release_date": "2024-02-01",
+       "new":false,
+       "title": "Gato Galáctico e o Feitiço do Tempo"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/8eAVBvK7ux51Ab9edZLbvCjEbbt.jpg",
+       "genre_ids": [
+         18,
+         27,
+         14,
+         35
+       ],
+       "id": 197158,
+       "original_language": "pt",
+       "overview": "Filme erótico em episódios com argumento e roteiro de Ody Fraga. Em \"As Gazelas\", Castillini mostra a intimidade de duas normalistas numa tarde dedicada ao estudo; David Cardoso, ator e diretor do segundo segmento, \"O Prazer da Virtude\", encarna um fetichista obcecado por hábitos religiosos; em \"O Gafanhoto\", John Doo dirige um drama sobrenatural sobre mulher cega e dominadora que pode ver através dos espelhos.",
+       "popularity": 71.568,
+       "poster_path": "/bhbPSpYjsRJAK7rXqL8APK9EwBl.jpg",
+       "release_date": "1981-01-01",
+       "new":false,
+       "title": "Porno"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/gAVN26CLN1gnf5a1fEdf8EqlMZG.jpg",
+       "genre_ids": [
+         10749,
+         9648,
+         18
+       ],
+       "id": 1173558,
+       "original_language": "pt",
+       "overview": "Nesta adaptação do livro de Sue Hecker, uma contadora vê a traição do noivo como uma oportunidade de transformar sua vida sexual, resultando em consequências arriscadas.",
+       "popularity": 70.117,
+       "poster_path": "/boPkFKrDSUeRxc9ltZRsuVSdRkz.jpg",
+       "release_date": "2023-10-25",
+       "new":false,
+       "title": "O Lado Bom de Ser Traída"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
+       "genre_ids": [
+         18,
+         80
+       ],
+       "id": 598,
+       "original_language": "pt",
+       "overview": "Buscapé é um jovem morador da Cidade de Deus que cresce em meio à violência. Com medo de se tornar um bandido, enxerga na fotografia uma oportunidade de ter uma vida digna.",
+       "popularity": 69.35,
+       "poster_path": "/pA70WUs7KHiHltfiBN4XEELOXcS.jpg",
+       "release_date": "2002-08-30",
+       "new":false,
+       "title": "Cidade de Deus"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/3Odg6tPxxK8iTx7M1WwN0DACPGL.jpg",
+       "genre_ids": [
+         35,
+         10749,
+         14
+       ],
+       "id": 1109778,
+       "original_language": "pt",
+       "overview": "Em uma noite qualquer, Marco e Laura se conhecem em um karaokê e cantam juntos a música \"Evidências\". Desde então, eles se apaixonaram e formaram um casal que parecia perfeito, até o momento do “sim”. Sem entender o que aconteceu, agora, toda vez que essa música tocar, Marco vai viajar nas suas lembranças com Laura.",
+       "popularity": 68.897,
+       "poster_path": "/ohN79eTvl1L6YvLJwYgWbkl7pw4.jpg",
+       "release_date": "2024-04-11",
+       "new":false,
+       "title": "Evidências do Amor"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/dQ7k83RFoi6C1J4ENZ3GviSPNbD.jpg",
+       "genre_ids": [
+         18
+       ],
+       "id": 626289,
+       "original_language": "pt",
+       "overview": "Maria recebe a visita do Anjo Gabriel, que traz a mensagem de sua gravidez do Espírito Santo. Mesmo relutante, José casa-se com ela e assume a criança para criar como sua. Em um humilde estábulo de Belém, nasce Jesus, que passa os próximos 33 anos pregando, até ser perseguido pelas autoridades do Império Romano que dominam a Judéia e ser condenado à cruz.",
+       "popularity": 66.19,
+       "poster_path": "/o8X5UcK3rehyxmslzjJuGT9xjWu.jpg",
+       "release_date": "2019-08-29",
+       "new":false,
+       "title": "O Filho do Homem"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/tGb044NgQYQJr58fta5O3OB6SpQ.jpg",
+       "genre_ids": [
+         18,
+         28,
+         80
+       ],
+       "id": 7347,
+       "original_language": "pt",
+       "overview": "Rio de Janeiro, 1997. Nascimento, capitão da Tropa de Elite do Rio de Janeiro, é designado para chefiar uma das equipes que tem como missão \"apaziguar\" o Morro do Turano por um motivo que ele considera insensato. Mas ele tem que cumprir as ordens enquanto procura por um substituto. Sua mulher, Rosane, está no final da gravidez e todos os dias lhe pede para sair da linha de frente do batalhão. Pressionado, o capitão sente os efeitos do estresse.Neste clima, é chamado para mais uma emergência num morro. Em meio a um tiroteio em um baile funk, Nascimento e sua equipe têm que resgatar dois aspirantes a oficiais da PM: Neto e Matias. Ansiosos por entrar em ação e impressionados com a eficiência de seus salvadores, os dois se candidatam ao curso de formação da Tropa de Elite.",
+       "popularity": 53.411,
+       "poster_path": "/atl4a9VFVP7JYvk4GeSgqhLOfjC.jpg",
+       "release_date": "2007-10-12",
+       "new":false,
+       "title": "Tropa de Elite"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/eVPMCjjZ3kDRIYrTooNKwjZnUl.jpg",
+       "genre_ids": [
+         27,
+         9648
+       ],
+       "id": 1082063,
+       "original_language": "pt",
+       "overview": "Ao lado de sua namorada, Edward decide desvendar os segredos a respeito de sua família biológica, com quem nunca teve contato. No entanto, o que parecia ser uma jornada de descobertas pelo Norte de Portugal rapidamente se transforma em um pesadelo indescritível. Edward logo percebe que os laços que o unem a sua família estão mergulhados em um segredo macabro, capaz de atormentar até mesmo os mais corajosos.",
+       "popularity": 51.836,
+       "poster_path": "/2v3Yukqm3gAnhz2uPSzQjq6qojE.jpg",
+       "release_date": "2024-01-18",
+       "new":false,
+       "title": "A Semente do Mal"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/efro4duB7agkA2Xl5LmkD3HeCim.jpg",
+       "genre_ids": [
+         28,
+         53,
+         18
+       ],
+       "id": 818511,
+       "original_language": "pt",
+       "overview": "Com muita velocidade, perseguições e explosões nas pistas, vem aí no pinote CARGA MÁXIMA!",
+       "popularity": 46.034,
+       "poster_path": "/ocKoEvCPX809gWsyEXRP2zTViY5.jpg",
+       "release_date": "2023-09-27",
+       "new":false,
+       "title": "Carga Máxima"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/rNQMO0cqzbqE4dRBfZeVWB11Lsy.jpg",
+       "genre_ids": [
+         18
+       ],
+       "id": 1004284,
+       "original_language": "pt",
+       "overview": "Cinco espíritos de Nosso Lar vêm à Terra em missão de resgate de projetos de vidas que correm perigo. Médico cuja história foi base do primeiro filme, André Luiz  junta-se ao grupo liderado pelo mentor Aniceto.",
+       "popularity": 44.25,
+       "poster_path": "/6cP2MENe3zOj77ndC5TvoLq8MtU.jpg",
+       "release_date": "2024-01-25",
+       "new":false,
+       "title": "Nosso Lar 2: Os Mensageiros"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/jkkw7YyfWO1Vc0i6YFU1JQef8DV.jpg",
+       "genre_ids": [
+         18,
+         28,
+         80
+       ],
+       "id": 47931,
+       "original_language": "pt",
+       "overview": "O destino da cidade do Rio de Janeiro e de Nascimento se cruzam em \"Tropa de Elite 2\", quando suas obrigações de pai se chocam com as de policial. Mais maduro, estratégico e solitário, o agora Coronel Nascimento faz o bope crescer e coloca o tráfico de drogas de joelho. Isto apenas para descobrir que na segurança pública do Rio de Janeiro nada é o que parece. O sistema se reinventa e descobre como lucrar sem o intermédio do tráfico. Em perseguição ao caminho trilhado pelo sistema, Nascimento vai além dos limites do quartel, revelando as ligações das milícias com o Estado. E o preço por essa descoberta é alto: o inimigo agora é outro.",
+       "popularity": 38.241,
+       "poster_path": "/8G7F938AHqBBLc5yJXPUJhSJzN5.jpg",
+       "release_date": "2010-10-08",
+       "new":false,
+       "title": "Tropa de Elite 2: O Inimigo Agora é Outro"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/3JVNLc6zIy6oZyqJrbvuzwO2RB4.jpg",
+       "genre_ids": [],
+       "id": 1220715,
+       "original_language": "pt",
+       "overview": "Em uma madrugada monótona no trabalho, Bola e Geleia, dois funcionários de um posto de gasolina no meio do nada, começam a presenciar acontecimentos cada vez mais amedrontadores. Ao chamar seu chefe para ajudá-los, descobrirão que gerenciar um posto pode ser mais perigoso do que imaginavam.",
+       "popularity": 31.537,
+       "poster_path": "/qpqwzvqD0VwwAQ31egAkWOBEl2m.jpg",
+       "release_date": "2024-02-05",
+       "new":false,
+       "title": "Turno Maldito"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/t0kHIE4ERtw3h4qwTSmzt5LyhRY.jpg",
+       "genre_ids": [
+         99
+       ],
+       "id": 785976,
+       "original_language": "pt",
+       "overview": "Documentário que retrata a vida de Pelé, da busca pela perfeição à condição de mito. Abrangendo um extraordinário período de 12 anos, a produção mostra como o único jogador a vencer três Copas do Mundo passou de astro do futebol em 1958 a herói nacional em 1970, uma época radical e turbulenta no Brasil.",
+       "popularity": 26.949,
+       "poster_path": "/cVKAep8V6rrFh0IhABC0bkzjwK5.jpg",
+       "release_date": "2021-02-23",
+       "new":false,
+       "title": "Pelé"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/lrLIy9OFRQg4VkhrCyolfNXJEUH.jpg",
+       "genre_ids": [
+         18
+       ],
+       "id": 666,
+       "original_language": "pt",
+       "overview": "Dora escreve cartas para analfabetos na estação Central do Brasil. Uma das clientes de Dora é Ana, que vem escrever uma carta com o seu filho, Josué, um garoto de nove anos, que sonha encontrar o pai que nunca conheceu. Na saída da estação, Ana é atropelada e Josué fica abandonado. Mesmo a contragosto, Dora acaba acolhendo o menino e envolvendo-se com ele. Termina por levar Josué para o interior do Nordeste, à procura do pai. À medida em que vão entrando país adentro, esses dois personagens, tão diferentes, vão se aproximando... Começa então uma viagem fascinate ao coração do Brasil, à procura do pai desaparecido, e uma viagem profundamente emotiva ao coração de cada um dos personagens do filme.",
+       "popularity": 24.502,
+       "poster_path": "/20gvOww3EDFaDZyNowVGAHtXo0H.jpg",
+       "release_date": "1998-11-20",
+       "new":false,
+       "title": "Central do Brasil"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/ihucbBrACwSP7y6y14bogOLBCH.jpg",
+       "genre_ids": [
+         99,
+         80
+       ],
+       "id": 1294017,
+       "original_language": "pt",
+       "overview": "Depois de sair da prisão, a doleira Nelma Kodama conta como se meteu em um dos maiores escândalos de corrupção do Brasil.",
+       "popularity": 24.491,
+       "poster_path": "/zOMu5Q3jYO2v1C8MULsSmhwNzrI.jpg",
+       "release_date": "2024-06-06",
+       "new":false,
+       "title": "Doleira: A História de Nelma Kodama"
+     },
+     {
+       "backdrop_path": "https://image.tmdb.org/t/p/w342/AgYQOgvtryEtQuBjfRNghFmhDfk.jpg",
+       "genre_ids": [
+         10749,
+         35,
+         10402
+       ],
+       "id": 999501,
+       "original_language": "pt",
+       "overview": "Hero é um roqueiro muito talentoso, mas pouco reconhecido; Sandro é o sertanejo mais famoso e polêmico do Brasil. Após uma cirurgia deixar o sertanejo em coma, o roqueiro tem a chance de trocar de lugar com ele e embarcar em uma grande turnê pelo país - mas a viagem não vai ser tão simples, já que Hero conhece a ex-namorada de Sandro, Lulli, e se apaixona pela garota. Agora ele precisa decidir se prefere a fama ou seus princípios.",
+       "popularity": 24.49,
+       "poster_path": "/yF6DYBbShJuKbUShdU8UFVquk8i.jpg",
+       "release_date": "2023-10-05",
+       "new":false,
+       "title": "Rodeio Rock"
+     }
+   ],
+   "genres": [
+     {
+       "id": 28,
+       "nome": "Ação"
+     },
+     {
+       "id": 12,
+       "nome": "Aventura"
+     },
+     {
+       "id": 16,
+       "nome": "Animação"
+     },
+     {
+       "id": 35,
+       "nome": "Comédia"
+     },
+     {
+       "id": 80,
+       "nome": "Crime"
+     },
+     {
+       "id": 99,
+       "nome": "Documentário"
+     },
+     {
+       "id": 18,
+       "nome": "Drama"
+     },
+     {
+       "id": 10751,
+       "nome": "Família"
+     },
+     {
+       "id": 14,
+       "nome": "Fantasia"
+     },
+     {
+       "id": 36,
+       "nome": "Histórico"
+     },
+     {
+       "id": 27,
+       "nome": "Terror"
+     },
+     {
+       "id": 10402,
+       "nome": "Música"
+     },
+     {
+       "id": 9648,
+       "nome": "Mistério"
+     },
+     {
+       "id": 10749,
+       "nome": "Romance"
+     },
+     {
+       "id": 878,
+       "nome": "Ficção Científica"
+     },
+     {
+       "id": 10770,
+       "nome": "TV"
+     },
+     {
+       "id": 53,
+       "nome": "Thriller"
+     },
+     {
+       "id": 10752,
+       "nome": "Guerra"
+     },
+     {
+       "id": 37,
+       "nome": "Ocidental"
+     }
+   ]
+ }

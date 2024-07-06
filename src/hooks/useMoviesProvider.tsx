@@ -1,9 +1,31 @@
-import { useContext, useMemo, useState } from "react";
+import React, { useContext, useMemo, useState } from "react";
 import { BD, MoviesContext } from "../context/MoviesContext";
 import { Titulo } from "../component/Titulo";
 import { Panel } from "../component/Panels/Panel";
 import { Container } from "../component/Container";
+import styled from "styled-components";
 
+export type allGenres = {
+    id: number
+    nome: string
+}
+
+export type GenreType = {
+    allGenres: allGenres[]
+    setAllGenres: React.Dispatch<React.SetStateAction<allGenres[]>>
+}
+
+const NewVideoStyled = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100vw;
+    padding: 0;
+    max-width: 100%;
+    min-width: 350px;
+    align-items: baseline;
+`
 
 export const useMoviesProvider = () => {
     const context = useContext(MoviesContext)
@@ -14,12 +36,22 @@ export const useMoviesProvider = () => {
 
     const { movies, setMovies } = context
 
-    // const [moviesId, setMoviesId] = useState<Array<number>>([])
-    const [panels, setPanels] = useState<JSX.Element|JSX.Element[]>([]);
+    const [panels, setPanels] = useState<JSX.Element | JSX.Element[]>([]);
+    const [allGenres, setAllGenres] = useState<allGenres[]|never[]>([]);
 
+    useMemo(() => {
+        async function listAllGenre() {
+            const URL = `https://my-json-server.typicode.com/limonheiro/db_genres/genres`
+            const res = await fetch(URL)
+            const data = await res.json()
+            setAllGenres(Anterior => data !== undefined ? data : Anterior)
+            console.log(data)
+        }
+        listAllGenre()
+    }, [])
 
-    const getGenre = async (id: number) => {
-        const response = await fetch(`http://localhost:3000/genres?id=${id}`)
+    const getGenreMovie = async (id: number) => {
+        const response = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?id=${id}`)
             .then(response => response.json())
             .then(data => data[0] !== undefined ? data[0].nome : "indefinido")
             .catch(error => {
@@ -29,62 +61,77 @@ export const useMoviesProvider = () => {
         return response
     }
 
+    const getIdGenre = async (genre: string) => {
+        const res = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?nome=${genre}`)
+        const data = await res.json()
+        const id = Number(data[0].id)
+        // return `?genre_ids_like=${id}`
+        return `?genre_ids=${id}`
+    }
 
-    const Seccao = (genre: string) => {
-        fetch(`http://localhost:3000/genres?nome=${genre}`)
+    const Seccao = async (genre: string, newVideo?: true | false | undefined) => {
+        const data = newVideo ? '?new=true' : await getIdGenre(genre)
+        console.log(data)
+        fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies${data}`)
             .then(res => res.json())
-            .then(data => {
-                fetch(`http://localhost:3000/movies?genre_ids_like=${data[0].id}`)
-                    .then(res => res.json())
-                    .then(async (data) => {
+            .then(async (data) => {
+                const panel = await Promise.all(data.slice(0, 6).map(async (movie: BD) => {
+                    const genero = await getGenreMovie(movie.genre_ids[0]);
+                    return (
+                        <>
+                            <Panel
+                                key={movie.id}
+                                id={movie.id}
+                                title={movie.title}
+                                genre={genero}
+                                genre_ids={movie.genre_ids}
+                                ano={movie.release_date}
+                                describe={movie.overview}
+                                img={movie.backdrop_path}
+                            />
 
-                        const panel = await Promise.all(data.slice(0, 6).map(async (movie:BD) => {
-                            const genero = await getGenre(movie.genre_ids[0]);
-                                return (
-                                    <>
-                                        <Panel
-                                            key={movie.id}
-                                            id={movie.id}
-                                            title={movie.title}
-                                            genre={genero}
-                                            ano={movie.release_date.split('-')[0]}
-                                            describe={movie.overview}
-                                            img={`https://image.tmdb.org/t/p/w342${movie.backdrop_path}`}
-                                        />
+                        </>
+                    );
+                }))
+                const ContainerPanel = <>
+                    <Titulo>{genre}</Titulo>
+                    <Container column={false}>
+                        {panel}
+                    </Container></>
 
-                                    </>
-                                );
-                        }))
-                        setPanels(Anterior => (
+                setPanels(Anterior => {
+                    if (newVideo) {
+                        return (
+                            <>
+                                {Anterior}
+                                <NewVideoStyled>
+                                    {ContainerPanel}
+                                </NewVideoStyled>
+                            </>
+                        )
+                    } else {
+                        return (
                             <>
                                 {Anterior}
                                 <Container column>
-                                    <Titulo>{genre}</Titulo>
-                                    <Container column={false}>
-                                        {panel}
-                                    </Container>
+                                    {ContainerPanel}
                                 </Container>
                             </>
-                        ))
-                    })
+                        )
+                    }
+                }
+                )
             })
+
     }
-
-    // console.log(moviesId)
-
-    useMemo(() => {
-        fetch('http://localhost:3000/movies')
-            .then(res => res.json())
-            .then(data => setMovies(data))
-    }, [])
 
     return {
         movies,
         setMovies,
         panels,
         setPanels,
-        getGenre,
+        getGenreMovie,
+        allGenres,
         Seccao
     }
-
 }

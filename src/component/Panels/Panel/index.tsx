@@ -3,6 +3,9 @@ import styled, { css } from 'styled-components'
 import { CirclePlay, SquarePen } from 'lucide-react';
 import { CircleX } from 'lucide-react';
 import { useState } from 'react';
+import { Dialog, DialogStyled, OverlayStyled } from '../../Dialog';
+import { useMoviesProvider } from '../../../hooks/useMoviesProvider';
+import { Form } from '../../Form';
 
 type PanelVar = {
     isfocused: number
@@ -17,7 +20,14 @@ const ContainerStyled = styled.div`
     max-width: 280px;
     height: 150px;
     padding-top: 0.25;
-    padding-bottom: 1rem;
+    padding-bottom: 0.75;
+    align-self: flex-start;
+    @media screen and (max-width: 801px) {
+        margin-bottom: 0.5rem;
+        :nth-last-child(1){
+            margin-bottom: 0px;
+        }
+    }
 `
 
 const ContainerPanelStyled = styled.div<PanelVar>`
@@ -60,11 +70,20 @@ const ContainerBottomStyled = styled.div<PanelVar>`
     z-index: 5;
     top: 100%;
     padding-top: 5px;
-    margin-top: 8px;
+    margin-top: 4px;
 
     ${({ isfocused }) => {
         return isfocused && [displayStyle, blurStyled]
     }}
+
+    @media screen and (max-width: 801px) {
+            top:0;
+
+            margin-bottom: 0.5rem;
+            :nth-last-child(1){
+                margin-bottom: 0px;
+            }
+        }
 
 `
 
@@ -145,45 +164,54 @@ const TextDescribeStyled = styled.p`
     overflow: auto;
 
     scrollbar-width: thin;
-    scrollbar-color: #000 #fff;
+
 
     padding: 0 16px 16px 8px;
     line-height: 1.3;
 `
 
-const DialogStyled = styled.dialog`
-    z-index: 999;
-`
-
 type PanelProps = {
-    id: string|number
+    id: number
     title: string
     genre: string
+    genre_ids: number[]
     ano: string
     describe: string
     img: string
 }
 
-
-
-export const Panel = ({ id, title, genre, ano, describe, img }: PanelProps) => {
+// genre_ids lista de genero representa por numeros
+// genre nome do genero principal 
+export const Panel = ({ id, title, genre, genre_ids, ano, describe, img }: PanelProps) => {
 
     const [isfocused, setFocused] = useState<boolean>(false);
     const [showModal, setShowModal] = useState<boolean>(false);
-    const [linkVideo, setLinkVideo] = useState<string>()
+    const [deleteModal, setDeleteModal] = useState<boolean>(false);
+    const [alterarModal, setAlterarModal] = useState<boolean>(false)
+    const [linkVideo, setLinkVideo] = useState<string>();
+    const [genreIds, setGenreIds] = useState<Array<number>>(genre_ids)
+    const { allGenres } = useMoviesProvider() // lista de todos os generos
 
-    async function trailerID(id:string|number) {
+    async function trailerID(id: string | number) {
         const URL = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=7bd8468dd9add6745a48f0808ba6f1db&language=pt-BR`
         const res = await fetch(URL)
         const data = await res.json()
-        const trailerLink = data.results[0].key
-
-        // const VideoURL = `https://www.themoviedb.org/video/play?key=${trailerLink}`
-        // res = await fetch(URL)
-        // data = await res.json()
-        // console.log(data.results[0].key)
-        setLinkVideo(trailerLink)
+        if (data.results[0]) {
+            const trailerLink = data.results[0].key
+            console.log(data)
+            setLinkVideo(trailerLink)
+        }
         setShowModal(!showModal)
+    }
+
+    function deleteData(id: string | number) {
+        fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
     }
 
     return (
@@ -192,6 +220,9 @@ export const Panel = ({ id, title, genre, ano, describe, img }: PanelProps) => {
                 <ContainerPanelStyled isfocused={isfocused ? 1 : 0}>
                     <PanelStyled
                         tabIndex={0}
+                        onClick={() => setFocused(true)}
+                        // onTouchStart={() => setFocused(!isfocused)}
+                        // onPointerDown={() => setFocused(false)}
                         onMouseEnter={() => setFocused(true)}
                         onMouseLeave={() => setFocused(false)}
                     >
@@ -200,15 +231,21 @@ export const Panel = ({ id, title, genre, ano, describe, img }: PanelProps) => {
                             <h1>{title}</h1>
                             <ContainerSubtitleStyled >
                                 <p>{genre}</p>
-                                <p>{ano}</p>
+                                <p>{ano.split('-')[0]}</p>
                             </ContainerSubtitleStyled>
                         </ContainerTitleStyled>
                         <ContainerBottomStyled isfocused={isfocused ? 1 : 0}>
                             <ContainerDescribeStyled>
-                                <CirclePlay onClick={() => trailerID(id)} />
+                                <CirclePlay
+                                    onTouchStart={() => trailerID(id)}
+                                    onClick={() => trailerID(id)} />
                                 <div className='container_edicao'>
-                                    <CircleX />
-                                    <SquarePen />
+                                    <CircleX
+                                        onTouchStart={() => setDeleteModal(!deleteModal)}
+                                        onClick={() => setDeleteModal(!deleteModal)} />
+                                    <SquarePen
+                                        onTouchStart={() => setAlterarModal(!alterarModal)}
+                                        onClick={() => setAlterarModal(!alterarModal)} />
                                 </div>
                             </ContainerDescribeStyled>
                             <TextDescribeStyled>
@@ -218,17 +255,46 @@ export const Panel = ({ id, title, genre, ano, describe, img }: PanelProps) => {
                     </PanelStyled>
                 </ContainerPanelStyled>
             </ContainerStyled>
-            {showModal &&
-                <DialogStyled open={showModal}>
-                    <iframe
-                        width="560"
-                        height="315"
-                        src={`https://www.youtube.com/embed/${linkVideo}?si=_kJceVPnZL2f_Jga`}
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    >
-                    </iframe>
-                </DialogStyled>}
+            <Dialog showModal={showModal} functionShowModal={() => setShowModal(!showModal)} linkVideo={linkVideo} ></Dialog>
+
+            {deleteModal &&
+                <>
+                    <OverlayStyled onClick={() => setDeleteModal(!deleteModal)} />
+                    <DialogStyled form={false} open={deleteModal}>
+                        <form method="dialog">
+                            <h2>Deseja <span>deletar</span><br /><strong>{title}</strong>?</h2>
+                            <div className='container_buttons'>
+                                <button className='delele' onClick={() => {
+                                    deleteData(id)
+                                    window.location.reload();
+                                }}>Deletar</button>
+                                <button onClick={() => setDeleteModal(!deleteModal)}>Cancelar</button>
+                            </div>
+                        </form>
+                    </DialogStyled>
+                </>
+            }
+
+            {alterarModal &&
+                <>
+                    <OverlayStyled onClick={() => setAlterarModal(!alterarModal)} />
+                    <DialogStyled open={alterarModal} form={true}>
+                        <Form
+                            id={id}
+                            tituloForm="Editando"
+                            title={title}
+                            buttonText="Alterar"
+                            allGenres={allGenres}
+                            genreIds={genreIds}
+                            setGenreId={setGenreIds}
+                            ano={ano}
+                            img={img}
+                            describe={describe}
+                            setModal={() => setAlterarModal(!alterarModal)}
+                        />
+                    </DialogStyled>
+                </>
+            }
         </>
     )
 }
