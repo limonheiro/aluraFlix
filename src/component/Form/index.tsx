@@ -1,5 +1,5 @@
 import React, { FormEvent } from "react"
-import { allGenres } from "../../hooks/useMoviesProvider"
+import { allGenresType } from "../../hooks/useMoviesProvider"
 
 
 type FormProps = {
@@ -7,7 +7,7 @@ type FormProps = {
     id?: number | undefined
     tituloForm: string | undefined
     title: string | undefined
-    allGenres: allGenres[]|never[]
+    allGenres: allGenresType[]|never[]
     genreIds: Array<number>
     setGenreId: React.Dispatch<React.SetStateAction<number[]>>
     ano: string | undefined
