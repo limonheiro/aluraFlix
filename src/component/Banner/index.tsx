@@ -91,7 +91,7 @@ export const Banner = () => {
                             tituloForm="Formulario para"
                             title=''
                             buttonText="Enviar"
-                            allGenres={allGenres}
+                            allGenres={allGenres.genres}
                             genreIds={genreIds}
                             setGenreId={setGenreIds}
                             ano=''
