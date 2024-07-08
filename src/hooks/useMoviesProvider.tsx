@@ -69,7 +69,7 @@ export const useMoviesProvider = () => {
             }
 
         } else {
-            const res = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?nome=${genre}`)
+            const res = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?nome=${genreName}`)
             const data =  await res.json()
             const id = Number(data[0].id)
             return `?genre_ids=${id}`
