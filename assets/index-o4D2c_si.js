@@ -78,7 +78,7 @@ Error generating stack: `+o.message+`
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const Lm=Ao("SquarePen",[["path",{d:"M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7",key:"1m0v6g"}],["path",{d:"M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z",key:"ohrbg2"}]]),zm="/aluraFlix/assets/madMax-700-CrU76aLj.webp",uo=ie.div`
+ */const Lm=Ao("SquarePen",[["path",{d:"M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7",key:"1m0v6g"}],["path",{d:"M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z",key:"ohrbg2"}]]),zm=""+new URL("madMax-700-CrU76aLj.webp",import.meta.url).href,uo=ie.div`
     position: fixed;
     z-index: 998;
     width: 100vw;
@@ -458,7 +458,7 @@ Error generating stack: `+o.message+`
     align-items: center;
     text-transform: capitalize;
     justify-content: normal;
-`,zy=()=>{const{panels:e,Seccao:t,isLoading:n,error:r}=ep(),i=[["Recentes",!0],["Família"],["Ação"],["Romance"]];return z.useMemo(()=>{async function o(){for(const l of i)if(l.length===1&&await t(l[0]),l.length===2){const[u,s]=l;await t(u,s)}}o()},[]),n?S.jsx("div",{children:"Loading..."}):r?S.jsx("div",{children:"Error loading genres: error"}):S.jsx(Iy,{children:S.jsx(Ly,{children:e})})},Dy="/aluraFlix/assets/wide-CTwnG_n1.webp",My=ie.footer`
+`,zy=()=>{const{panels:e,Seccao:t,isLoading:n,error:r}=ep(),i=[["Recentes",!0],["Família"],["Ação"],["Romance"]];return z.useMemo(()=>{async function o(){for(const l of i)if(l.length===1&&await t(l[0]),l.length===2){const[u,s]=l;await t(u,s)}}o()},[]),n?S.jsx("div",{children:"Loading..."}):r?S.jsx("div",{children:"Error loading genres: error"}):S.jsx(Iy,{children:S.jsx(Ly,{children:e})})},Dy=""+new URL("wide-CTwnG_n1.webp",import.meta.url).href,My=ie.footer`
     display: flex;
     flex-direction: column;
     gap: 0.25rem;;
