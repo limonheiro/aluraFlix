@@ -13,6 +13,7 @@ export type BD = {
     popularity: number,
     poster_path: string,
     release_date: string,
+    video_link: string,
     title: string,
     video: boolean
 }

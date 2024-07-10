@@ -4,8 +4,8 @@ import { Titulo } from "../component/Titulo";
 import { Panel } from "../component/Panels/Panel";
 import { Container } from "../component/Container";
 import { nanoid } from 'nanoid'
-import allGenresData from "../data/genres.json"
 import styled from "styled-components";
+import { useGenres } from "./useGenres";
 
 export type allGenresType = {
     id: number
@@ -16,7 +16,7 @@ export type GenresType = {
     genres: allGenresType[]
 }
 
-const allGenres: GenresType = allGenresData;
+// const allGenres: GenresType = allGenresData;
 
 export const NewVideoStyled = styled.div`
     display: flex;
@@ -39,13 +39,13 @@ export const useMoviesProvider = () => {
     }
 
     const { movies, setMovies } = context
-
     const [panels, setPanels] = useState<JSX.Element | JSX.Element[]>([]);
+    const { data: allGenres, isLoading, error } = useGenres();
 
     const getGenreMovie = async (id: number) => {
-        if (allGenres.genres.length) {
-            const genre = allGenres.genres.filter(genre => genre.id === id)
-            if (genre.length > 0) {
+        if (allGenres) {
+            const genre = allGenres.genres.filter((genre: allGenresType) => genre.id === id)
+            if (genre) {
                 return genre[0].nome
             }
 
@@ -62,22 +62,21 @@ export const useMoviesProvider = () => {
     }
 
     const getIdGenre = async (genreName: string) => {
-        if (allGenres.genres.length) {
-            const genre = allGenres.genres.filter((genre) => genre.nome === genreName)
-            if (genre.length > 0) {
+        if (allGenres) {
+            const genre = allGenres.genres.filter((genre: allGenresType) => genre.nome === genreName)
+            if (genre) {
                 return `?genre_ids=${genre[0].id}`
             }
 
         } else {
             const res = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?nome=${genreName}`)
-            const data =  await res.json()
+            const data = await res.json()
             const id = Number(data[0].id)
             return `?genre_ids=${id}`
         }
     }
 
-    const Seccao = async (genre: string, newVideo?: true | false | undefined) => {
-
+    const Seccao = async (genre: string, newVideo?: boolean) => {
         const data = newVideo ? '?new=true' : await getIdGenre(genre)
         fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies${data}`)
             .then(res => res.json())
@@ -93,6 +92,7 @@ export const useMoviesProvider = () => {
                                 genre={genero}
                                 genre_ids={movie.genre_ids}
                                 ano={movie.release_date}
+                                video_link={movie.video_link}
                                 describe={movie.overview}
                                 img={movie.backdrop_path}
                             />
@@ -141,6 +141,8 @@ export const useMoviesProvider = () => {
         setPanels,
         getGenreMovie,
         allGenres,
+        isLoading,
+        error,
         Seccao
     };
 }

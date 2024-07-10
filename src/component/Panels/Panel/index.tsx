@@ -4,7 +4,6 @@ import { CirclePlay, SquarePen } from 'lucide-react';
 import { CircleX } from 'lucide-react';
 import { useState } from 'react';
 import { Dialog, DialogStyled, OverlayStyled } from '../../Dialog';
-import { useMoviesProvider } from '../../../hooks/useMoviesProvider';
 import { Form } from '../../Form';
 
 type PanelVar = {
@@ -178,27 +177,26 @@ type PanelProps = {
     ano: string
     describe: string
     img: string
+    video_link: string
 }
 
 // genre_ids lista de genero representa por numeros
 // genre nome do genero principal 
-export const Panel = ({ id, title, genre, genre_ids, ano, describe, img }: PanelProps) => {
+export const Panel = ({ id, title, genre, genre_ids, ano, describe, video_link, img }: PanelProps) => {
 
     const [isfocused, setFocused] = useState<boolean>(false);
     const [showModal, setShowModal] = useState<boolean>(false);
     const [deleteModal, setDeleteModal] = useState<boolean>(false);
     const [alterarModal, setAlterarModal] = useState<boolean>(false)
-    const [linkVideo, setLinkVideo] = useState<string>();
+    const [linkVideo, setLinkVideo] = useState<string>('');
     const [genreIds, setGenreIds] = useState<Array<number>>(genre_ids)
-    const { allGenres } = useMoviesProvider() // lista de todos os generos
 
-    async function trailerID(id: string | number) {
-        const URL = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=7bd8468dd9add6745a48f0808ba6f1db&language=pt-BR`
-        const res = await fetch(URL)
-        const data = await res.json()
-        if (data.results[0]) {
-            const trailerLink = data.results[0].key
-            setLinkVideo(trailerLink)
+    async function trailerID() {
+
+        if(linkVideo === ''){
+            const hashVideo = video_link.split('watch?v=')[1]
+            console.log(hashVideo)
+            setLinkVideo(`https://www.youtube.com/embed/${hashVideo}?si=ZQrkDkNQwzSw7wqp&amp;controls=0`)
         }
         setShowModal(!showModal)
     }
@@ -245,8 +243,8 @@ export const Panel = ({ id, title, genre, genre_ids, ano, describe, img }: Panel
                         <ContainerBottomStyled $isfocused={isfocused}>
                             <ContainerDescribeStyled>
                                 <CirclePlay
-                                    onTouchStart={() => trailerID(id)}
-                                    onClick={() => trailerID(id)} />
+                                    onTouchStart={() => trailerID()}
+                                    onClick={() => trailerID()} />
                                 <div className='container_edicao'>
                                     <CircleX
                                         onTouchStart={() => setDeleteModal(!deleteModal)}
@@ -263,12 +261,12 @@ export const Panel = ({ id, title, genre, genre_ids, ano, describe, img }: Panel
                     </PanelStyled>
                 </ContainerPanelStyled>
             </ContainerStyled>
-            <Dialog showModal={showModal} functionShowModal={() => setShowModal(!showModal)} linkVideo={linkVideo} ></Dialog>
+            <Dialog showModal={showModal} functionShowModal={() => setShowModal(!showModal)} linkVideo={linkVideo as string} ></Dialog>
 
             {deleteModal &&
                 <>
                     <OverlayStyled onClick={() => setDeleteModal(!deleteModal)} />
-                    <DialogStyled form={false} open={deleteModal}>
+                    <DialogStyled $form={false} open={deleteModal}>
                         <form method="dialog">
                             <h2>Deseja <span>deletar</span><br /><strong>{title}</strong>?</h2>
                             <div className='container_buttons'>
@@ -285,18 +283,18 @@ export const Panel = ({ id, title, genre, genre_ids, ano, describe, img }: Panel
             {alterarModal &&
                 <>
                     <OverlayStyled onClick={() => setAlterarModal(!alterarModal)} />
-                    <DialogStyled open={alterarModal} form={true}>
+                    <DialogStyled open={alterarModal} $form={true}>
                         <Form
                             id={id}
                             tituloForm="Editando"
                             title={title}
                             buttonText="Alterar"
-                            allGenres={allGenres.genres}
                             genreIds={genreIds}
                             setGenreId={setGenreIds}
                             ano={ano}
                             img={img}
                             describe={describe}
+                            linkVideo={video_link}
                             setModal={() => setAlterarModal(!alterarModal)}
                         />
                     </DialogStyled>

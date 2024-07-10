@@ -3,7 +3,6 @@ import { CirclePlus } from 'lucide-react';
 import img from '../../assets/img/madMax-700.webp'
 import { useState } from 'react';
 import { DialogStyled, OverlayStyled } from '../Dialog';
-import { useMoviesProvider } from '../../hooks/useMoviesProvider';
 import { Form } from '../Form';
 
 const BannerStyled = styled.div<{ image: string }>`
@@ -68,7 +67,6 @@ const ContainerBannerStyled = styled.div`
 export const Banner = () => {
     const [addMovie, setAddMovie] = useState<boolean>(false)
     const [genreIds, setGenreIds] = useState<Array<number>>([])
-    const { allGenres } = useMoviesProvider()
     return (
         <>
             <BannerStyled image={img}>
@@ -86,12 +84,10 @@ export const Banner = () => {
             {addMovie &&
                 <>
                     <OverlayStyled onClick={() => setAddMovie(!addMovie)} />
-                    <DialogStyled form={true} open={addMovie}>
+                    <DialogStyled $form={true} open={addMovie}>
                         <Form
                             tituloForm="Formulario para"
-                            title=''
                             buttonText="Enviar"
-                            allGenres={allGenres.genres}
                             genreIds={genreIds}
                             setGenreId={setGenreIds}
                             ano=''

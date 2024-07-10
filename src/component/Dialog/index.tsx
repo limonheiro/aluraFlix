@@ -10,8 +10,8 @@ export const OverlayStyled = styled.div`
     right: 0;
 `
 
-export const DialogStyled = styled.dialog<{ form: true | false }>`
-    position: ${props => props.form ? 'absolute' : 'fixed'};
+export const DialogStyled = styled.dialog<{ $form: boolean }>`
+    position: ${props => props.$form ? 'absolute' : 'fixed'};
     z-index: 999;
     top: 0;
     right: 0;
@@ -119,26 +119,46 @@ export const DialogStyled = styled.dialog<{ form: true | false }>`
 `
 
 type typeDialogProps = {
+    id?: number | undefined,
     showModal: boolean,
     functionShowModal: () => void;
-    linkVideo: string | null | undefined
+    linkVideo: string 
 }
+
+// const getAllLinks = () => {
+//     fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies`)
+//         .then(res => res.json())
+//         .then(async (data) => {
+//             data.map(movie => {
+//                 fetch(`https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=7bd8468dd9add6745a48f0808ba6f1db&language=pt-BR`)
+//                     .then(res => res.json())
+//                     .then(data => {
+//                         if (data.results[0].key) {
+//                             console.log(movie.id,`https://www.youtube.com/watch?v=${data.results[0].key}`)
+//                         }
+//                     })
+//             })
+//         })
+// }
 
 export const Dialog = ({
     showModal = false,
     functionShowModal,
     linkVideo,
 }: typeDialogProps) => {
+    // const URL = `https://www.youtube.com/embed/${linkVideo}?si=_kJceVPnZL2f_Jga`
+    const URL = linkVideo
+    // console.log(linkVideo)
     return (
         <>
             {showModal &&
                 <>
                     <OverlayStyled onClick={functionShowModal} />
-                    <DialogStyled form={false} open={showModal}>
+                    <DialogStyled $form={false} open={showModal}>
                         <iframe
                             width="560"
                             height="315"
-                            src={`https://www.youtube.com/embed/${linkVideo}?si=_kJceVPnZL2f_Jga`}
+                            src={URL}
                         >
                         </iframe>
                         <form method="dialog">

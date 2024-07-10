@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { useMoviesProvider } from '../../hooks/useMoviesProvider'
 import styled from 'styled-components';
 
@@ -19,15 +19,38 @@ const SeccaoStyled = styled.div`
     justify-content: normal;
 `
 
+
 export const Panels = () => {
-    const { panels, Seccao } = useMoviesProvider()
+    const { panels, Seccao, isLoading, error } = useMoviesProvider()
+
+
+    const listaSeccoes: (string | boolean)[][] = [['Recentes', true], ['Família'], ['Ação'], ['Romance']]
 
     useMemo(() => {
-        Seccao('Recentes', true)
-        Seccao('Família')
-        Seccao('Ação')
-        Seccao('Terror')
+        async function Seccoes() {
+
+
+            for (const NomeSeccao of listaSeccoes) {
+                if (NomeSeccao.length === 1) {
+                    await Seccao(NomeSeccao[0] as string)
+                }
+                if (NomeSeccao.length === 2) {
+                    const [genre, newVideo] = NomeSeccao;
+                    await Seccao(genre as string, newVideo as boolean)
+
+                }
+            }
+        }
+        Seccoes()
     }, [])
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return (<div>Error loading genres: error</div>);
+    }
 
     return (
         <PanelStyled>

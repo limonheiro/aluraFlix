@@ -12,6 +12,7 @@
       "backdrop_path": "https://image.tmdb.org/t/p/w342/xg27NrXi7VXCGUr7MG75UqLl6Vg.jpg",
       "overview": "\"Divertida Mente 2\", da Disney e da Pixar, retorna à mente da adolescente Riley, e o faz no momento em que a sala de comando está passando por uma demolição repentina para dar lugar a algo totalmente inesperado: novas emoções! Alegria, Tristeza, Raiva, Medo e Nojinho não sabem bem como reagir quando Ansiedade aparece, e tudo indica que ela não está sozinha.",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=_OIQFxh8pGc",
       "id": 1022789
     },
     {
@@ -27,6 +28,7 @@
       "poster_path": "/7qOSKoOAPgemYhBwbJgBWcCxPWZ.jpg",
       "release_date": "2024-05-22",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=zerxSztagIY ",
       "title": "Furiosa: Uma Saga Mad Max"
     },
     {
@@ -42,6 +44,7 @@
       "poster_path": "/dzDK2TMXsxrolGVdZwNGcOlZqrF.jpg",
       "release_date": "2024-05-08",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=FcZ-4Gnr9Ok",
       "title": "Planeta dos Macacos: O Reinado"
     },
     {
@@ -58,6 +61,7 @@
       "poster_path": "/65QQjZNrVfTiuGp3chxx8dkfHDG.jpg",
       "release_date": "2024-06-20",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=XEG0tWu9yKw",
       "title": "Meu Malvado Favorito 4"
     },
     {
@@ -74,6 +78,7 @@
       "poster_path": "/ak6VZDHms5T4p0eFISk336kqjR6.jpg",
       "release_date": "2024-06-05",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=NSKLJzDD-yA",
       "title": "Bad Boys: Até o Fim"
     },
     {
@@ -91,6 +96,7 @@
       "poster_path": "/62SAZfLfzhxJWUFJvfIPMw6QUpE.jpg",
       "release_date": "2015-06-17",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=LSpeM7G4zfY",
       "title": "Divertida Mente"
     },
     {
@@ -106,6 +112,7 @@
       "poster_path": "/cQLJT6hTXio0md94oBsSWADOECf.jpg",
       "release_date": "2024-06-20",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=MJoYwV1zcyo",
       "title": "Alerta de Risco"
     },
     {
@@ -121,6 +128,7 @@
       "poster_path": "/kO6K9zEsKhNyqcrdGTSqAI6jrie.jpg",
       "release_date": "2024-03-27",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=va-7FEpUHVQ",
       "title": "Godzilla e Kong: O Novo Império"
     },
     {
@@ -137,6 +145,7 @@
       "poster_path": "/njsyAXtUcPjLCjOfGvtNLH4DHL2.jpg",
       "release_date": "2024-06-05",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=w5HaXjlGaZc",
       "title": "Sob as Águas do Sena"
     },
     {
@@ -152,6 +161,7 @@
       "poster_path": "/8Js658DZ6zaY135wpRnINGuTPOL.jpg",
       "release_date": "2023-08-25",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=fqTfEtT8jt4",
       "title": "MR-9: Missão Mortal"
     },
     {
@@ -167,6 +177,7 @@
       "poster_path": "/gyEnhITeHLky85XJxuTPqniPrzE.jpg",
       "release_date": "2024-06-26",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=ENocUCWoGHA",
       "title": "Um Lugar Silencioso: Dia Um"
     },
     {
@@ -182,6 +193,7 @@
       "poster_path": "/3Use5sOQWXL3BvcaKqUH7eQ7I53.jpg",
       "release_date": "2024-04-10",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=WEmIRA4JQfo",
       "title": "Guerra Civil"
     },
     {
@@ -197,6 +209,7 @@
       "poster_path": "/jFpsKOCppRvwP0Igwp0F0Xu1RBJ.jpg",
       "release_date": "2024-06-06",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=fsr7lgD7nZE",
       "title": "Os Observadores"
     },
     {
@@ -212,6 +225,7 @@
       "poster_path": "/xNSsIyZcbESWBm42VTo09zbjS6s.jpg",
       "release_date": "2024-05-08",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=6Kb30dU_lxk",
       "title": "Amigos Imaginários"
     },
     {
@@ -227,6 +241,7 @@
       "poster_path": "/ykZvwO1YvWCTV4XajuYBUXeubHA.jpg",
       "release_date": "2024-01-05",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=lBGeZrwHuKM",
       "title": "A Academia do Sr. Kleks"
     },
     {
@@ -243,6 +258,7 @@
       "poster_path": "/kPtNokhBtgwSp3MHaR3X4O0SPbF.jpg",
       "release_date": "2023-05-31",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=1kd1_MQlPME",
       "title": "The Round Up: No Way Out"
     },
     {
@@ -257,6 +273,7 @@
       "poster_path": "/jEjVWSz1hhVCO5Ab5QId90m6AfW.jpg",
       "release_date": "2024-06-20",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=5xNGkP9DXcU&pp=ygUOT3MgSW5mYWzDrXZlaXM%3D",
       "title": "Os Infalíveis"
     },
     {
@@ -274,6 +291,7 @@
       "poster_path": "/sCG0NZiBeHM0FYs1eDhJNPgrFYa.jpg",
       "release_date": "2024-03-02",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=5DRi7Fm9ipg",
       "title": "Kung Fu Panda 4"
     },
     {
@@ -287,6 +305,7 @@
       "poster_path": "/zDkaJgsPoSqa2cMe2hW2HAfyWwO.jpg",
       "release_date": "2024-05-09",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=R1VeyLrVaIo",
       "title": "The Last Kumite"
     },
     {
@@ -301,6 +320,7 @@
       "poster_path": "/bcM2Tl5HlsvPBnL8DKP9Ie6vU4r.jpg",
       "release_date": "2024-05-23",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=ijanBDsw4W4",
       "title": "Atlas"
     },
     {
@@ -318,6 +338,7 @@
       "poster_path": "/eXVflCGYGUbNSN4TmkLqQqM1rXc.jpg",
       "release_date": "2024-06-21",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=TWBvxMF88So",
       "title": "Loud House: Sem Tempo Para Espionar"
     },
     {
@@ -332,6 +353,7 @@
       "poster_path": "/7AkiDy6DVlfhJusglf6tvifX6dB.jpg",
       "release_date": "2024-04-24",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=FyVosS3MPqk",
       "title": "O Dublê"
     },
     {
@@ -347,6 +369,7 @@
       "poster_path": "/3l04H9ljNegDGG9gnKDhLExJvpz.jpg",
       "release_date": "2024-01-10",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=4uSn4Dem9i0",
       "title": "외계+인 2부"
     },
     {
@@ -361,6 +384,7 @@
       "poster_path": "/wmenjROhs4AI4vDBmSVy3d1tLL7.jpg",
       "release_date": "2023-10-25",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=1I6399Jf8Eo",
       "title": "Quando a Morte Sussurra"
     },
     {
@@ -377,6 +401,7 @@
       "poster_path": "/aQ2MhjWQtVOTDbqKvIkQp0xXjtv.jpg",
       "release_date": "2024-06-14",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=jeFotjm5ZEQ",
       "title": "Ultraman: A Ascensão"
     },
     {
@@ -391,6 +416,7 @@
       "poster_path": "/4xJd3uwtL1vCuZgEfEc8JXI9Uyx.jpg",
       "release_date": "2024-04-21",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=YrWxCFktVVc",
       "title": "Un père idéal"
     },
     {
@@ -405,6 +431,7 @@
       "poster_path": "/e8pI4XkYgUMuSJ8cEFbJE18wc4e.jpg",
       "release_date": "2024-02-27",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=ncwsW3qxQlo",
       "title": "Duna: Parte Dois"
     },
     {
@@ -420,6 +447,7 @@
       "poster_path": "/ns9Tr9fda1YuPK2k6BqwqmEOkgl.jpg",
       "release_date": "2024-05-28",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=Damps0Wkmd8",
       "title": "Biônicos"
     },
     {
@@ -437,6 +465,7 @@
       "poster_path": "/wXWnUhdnSuADRp9w7aAZNHx682v.jpg",
       "release_date": "2023-12-06",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=A-lKgAicz8s",
       "title": "Patos!"
     },
     {
@@ -452,6 +481,7 @@
       "poster_path": "/lkWYrzLIclGj56r4NJxuWeisK9R.jpg",
       "release_date": "2020-01-15",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=jCCGGYvFjlw",
       "title": "Bad Boys Para Sempre"
     },
     {
@@ -469,6 +499,7 @@
       "poster_path": "/qjjwYBk21klwdD86bxPro54qqaC.jpg",
       "release_date": "2023-08-18",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=rf2_V4CQrpE",
       "title": "(Re)Nascer"
     },
     {
@@ -485,6 +516,7 @@
       "poster_path": "/rC5RqXtFoTkBhNWE1dczwi4dZrX.jpg",
       "release_date": "2024-04-30",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=0yIO8HHoB0g",
       "title": "Garfield - Fora de Casa"
     },
     {
@@ -498,6 +530,7 @@
       "poster_path": "/8aRl9fIIjCiOc7dREwcXSEmKbQS.jpg",
       "release_date": "2023-12-01",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=rQichBapiII",
       "title": "Batalha Aérea"
     },
     {
@@ -511,6 +544,7 @@
       "poster_path": "/tINXSJfPiVGrTZTHFz5TFDh6SeX.jpg",
       "release_date": "2024-04-03",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=ZzRT05iHu9g",
       "title": "A Primeira Profecia"
     },
     {
@@ -525,6 +559,7 @@
       "poster_path": "/rzQyBZVPJm2JRRifwZvrRZVwq6z.jpg",
       "release_date": "2023-10-06",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=PnpeqmSZ30w",
       "title": "Mistério no Ártico"
     },
     {
@@ -538,6 +573,7 @@
       "poster_path": "/aG68lR36HbEASelSpwK7PHi8N9H.jpg",
       "release_date": "2023-07-24",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=mtH_n65vaNc",
       "title": "Visões Mortais"
     },
     {
@@ -555,6 +591,7 @@
       "poster_path": "/nJMNvYZ21bMdB2Pq0qCk88jnQc6.jpg",
       "release_date": "2024-06-11",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=BJQenyEQzxM",
       "title": "Wild Eyed and Wicked"
     },
     {
@@ -570,6 +607,7 @@
       "poster_path": "/ktxq0LYgl41I2DUn49TYIaS9dZR.jpg",
       "release_date": "2024-01-18",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=_O2N1aosSPk",
       "title": "Desespero Profundo"
     },
     {
@@ -585,6 +623,7 @@
       "poster_path": "/mtgqrSlT47VsmeMVanLTny7BknB.jpg",
       "release_date": "2015-05-13",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=IVmf82obaaA",
       "title": "Mad Max: Estrada da Fúria"
     },
     {
@@ -599,6 +638,7 @@
       "poster_path": "/ih0G409JNF8L7Maz3tQwPnLOjD7.jpg",
       "release_date": "2024-03-07",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=Y2NagMPIma4",
       "title": "Apaixonada"
     },
     {
@@ -612,23 +652,8 @@
       "poster_path": "/pj5L9BlAQWN8y3YJsxnMAI6cVo3.jpg",
       "release_date": "2024-02-01",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=spON2DWMJWM",
       "title": "Gato Galáctico e o Feitiço do Tempo"
-    },
-    {
-      "backdrop_path": "https://image.tmdb.org/t/p/w342/8eAVBvK7ux51Ab9edZLbvCjEbbt.jpg",
-      "genre_ids": [
-        18,
-        27,
-        14,
-        35
-      ],
-      "id": 197158,
-      "original_language": "pt",
-      "overview": "Filme erótico em episódios com argumento e roteiro de Ody Fraga. Em \"As Gazelas\", Castillini mostra a intimidade de duas normalistas numa tarde dedicada ao estudo; David Cardoso, ator e diretor do segundo segmento, \"O Prazer da Virtude\", encarna um fetichista obcecado por hábitos religiosos; em \"O Gafanhoto\", John Doo dirige um drama sobrenatural sobre mulher cega e dominadora que pode ver através dos espelhos.",
-      "poster_path": "/bhbPSpYjsRJAK7rXqL8APK9EwBl.jpg",
-      "release_date": "1981-01-01",
-      "new": false,
-      "title": "Porno"
     },
     {
       "backdrop_path": "https://image.tmdb.org/t/p/w342/gAVN26CLN1gnf5a1fEdf8EqlMZG.jpg",
@@ -643,6 +668,7 @@
       "poster_path": "/boPkFKrDSUeRxc9ltZRsuVSdRkz.jpg",
       "release_date": "2023-10-25",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=4Ovb9I302fE",
       "title": "O Lado Bom de Ser Traída"
     },
     {
@@ -657,6 +683,7 @@
       "poster_path": "/pA70WUs7KHiHltfiBN4XEELOXcS.jpg",
       "release_date": "2002-08-30",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=nBWtTrLxUjM",
       "title": "Cidade de Deus"
     },
     {
@@ -672,6 +699,7 @@
       "poster_path": "/ohN79eTvl1L6YvLJwYgWbkl7pw4.jpg",
       "release_date": "2024-04-11",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=hz8mfWOXFOw",
       "title": "Evidências do Amor"
     },
     {
@@ -685,6 +713,7 @@
       "poster_path": "/o8X5UcK3rehyxmslzjJuGT9xjWu.jpg",
       "release_date": "2019-08-29",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=Fj_gxv6INEQ",
       "title": "O Filho do Homem"
     },
     {
@@ -700,6 +729,7 @@
       "poster_path": "/atl4a9VFVP7JYvk4GeSgqhLOfjC.jpg",
       "release_date": "2007-10-12",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=uZBiNJQxtGw",
       "title": "Tropa de Elite"
     },
     {
@@ -714,6 +744,7 @@
       "poster_path": "/2v3Yukqm3gAnhz2uPSzQjq6qojE.jpg",
       "release_date": "2024-01-18",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=umn8JTkFBWE",
       "title": "A Semente do Mal"
     },
     {
@@ -729,6 +760,7 @@
       "poster_path": "/ocKoEvCPX809gWsyEXRP2zTViY5.jpg",
       "release_date": "2023-09-27",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=EF2Rs5gw6zM",
       "title": "Carga Máxima"
     },
     {
@@ -742,6 +774,7 @@
       "poster_path": "/6cP2MENe3zOj77ndC5TvoLq8MtU.jpg",
       "release_date": "2024-01-25",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=aGHRjDoSYr0",
       "title": "Nosso Lar 2: Os Mensageiros"
     },
     {
@@ -757,6 +790,7 @@
       "poster_path": "/8G7F938AHqBBLc5yJXPUJhSJzN5.jpg",
       "release_date": "2010-10-08",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=5tG4i8elT3I",
       "title": "Tropa de Elite 2: O Inimigo Agora é Outro"
     },
     {
@@ -768,6 +802,7 @@
       "poster_path": "/qpqwzvqD0VwwAQ31egAkWOBEl2m.jpg",
       "release_date": "2024-02-05",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=BhSv33LcJN8",
       "title": "Turno Maldito"
     },
     {
@@ -781,6 +816,7 @@
       "poster_path": "/cVKAep8V6rrFh0IhABC0bkzjwK5.jpg",
       "release_date": "2021-02-23",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=GS0dFi63Nzg",
       "title": "Pelé"
     },
     {
@@ -794,6 +830,7 @@
       "poster_path": "/20gvOww3EDFaDZyNowVGAHtXo0H.jpg",
       "release_date": "1998-11-20",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=JSWgOhRjJmo",
       "title": "Central do Brasil"
     },
     {
@@ -808,6 +845,7 @@
       "poster_path": "/zOMu5Q3jYO2v1C8MULsSmhwNzrI.jpg",
       "release_date": "2024-06-06",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=Rqz7Iho9qTs",
       "title": "Doleira: A História de Nelma Kodama"
     },
     {
@@ -823,6 +861,7 @@
       "poster_path": "/yF6DYBbShJuKbUShdU8UFVquk8i.jpg",
       "release_date": "2023-10-05",
       "new": false,
+      "video_link":"https://www.youtube.com/watch?v=KPUJRMpHVKI",
       "title": "Rodeio Rock"
     },
     {
@@ -834,6 +873,7 @@
       "backdrop_path": "https://images.mubicdn.net/images/film/386821/cache-898970-1718893232/image-w1280.jpg",
       "overview": "All fungi are fascinating—but some more than others. This soothing short shows that collecting, sharing, and using magic mushrooms can be delicate acts of care. Softly psychedelic images, playful in-camera effects, and intimate voice-over combine in a humble perspective on man’s place in the world.",
       "new": true,
+      "video_link":"https://trailers.mubicdn.net/386821/optimised/1080p-t-shrooms-2023_en_us_3585.514_1920_1014_1718714296.mp4",
       "id": 1294018
     }
   ],
