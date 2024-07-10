@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { useMoviesProvider } from '../../hooks/useMoviesProvider'
 import styled from 'styled-components';
 
