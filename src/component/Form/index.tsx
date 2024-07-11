@@ -47,25 +47,33 @@ export const Form = ({ id, buttonText, tituloForm, title, genreIds, setGenreId, 
             if (g.checked) { return Number(g.value) }
         }).filter(ele => ele !== undefined) as number[]
 
-        setGenreId(genre_ids)
-
-        const data = {
-            title: form.title.value,
-            genre_ids: genre_ids,
-            release_date: form.release_date.value,
-            backdrop_path: form.backdrop_path.value,
-            overview: form.overview.value,
-            video_link: form.video_link.value,
-            new: newFilme
+        if(genre_ids.length > 0){
+            setGenreId(genre_ids)
+            const data = {
+                title: form.title.value,
+                genre_ids: genre_ids,
+                release_date: form.release_date.value,
+                backdrop_path: form.backdrop_path.value,
+                overview: form.overview.value,
+                video_link: form.video_link.value,
+                new: newFilme
+            }
+            return data
+        }else{
+            alert('Escolha pelo menos um genero!')
+            return false
         }
 
-        return data
     }
 
     async function handleData(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
         const formElements = event.currentTarget.elements as typeof event.currentTarget.elements & CustomElements;
         const Movies = dataForm(formElements)
+
+        if (!Movies){
+            return 
+        }
 
         const URL = newFilme ? `https://668480d656e7503d1ae06de1.mockapi.io/movies` : `https://668480d656e7503d1ae06de1.mockapi.io/movies/${id}`
         const methodForm = newFilme ? 'POST' : 'PUT'
@@ -187,7 +195,7 @@ export const Form = ({ id, buttonText, tituloForm, title, genreIds, setGenreId, 
                     id='video_link'
                     type='text'
                     name='video_link'
-                    pattern="/(https\:\/*www.youtube.com\/watch\?v=*)\w+/g"
+                    pattern="^(https?:\/\/)?(www\.)?youtube\.com\/watch\?v=.+$"
                     value={formLinkVideo}
                     onChange={handleFormVideo}
                     placeholder="Link para video do Youtube"
@@ -199,6 +207,7 @@ export const Form = ({ id, buttonText, tituloForm, title, genreIds, setGenreId, 
                     value={formImg}
                     onChange={handleFormImg}
                     placeholder="Link para imagem"
+                    pattern="https?:\/\/.*\.(png|jpg|jpeg|webp|avif)$"
                     required></input>
                 <label htmlFor='overview'>Descrição</label>
                 <textarea
