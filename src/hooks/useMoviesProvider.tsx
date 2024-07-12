@@ -16,7 +16,6 @@ export type GenresType = {
     genres: allGenresType[]
 }
 
-// const allGenres: GenresType = allGenresData;
 
 export const NewVideoStyled = styled.div`
     display: flex;
@@ -39,49 +38,50 @@ export const useMoviesProvider = () => {
     }
 
     const { movies, setMovies } = context
-    const [panels, setPanels] = useState<JSX.Element | JSX.Element[]>([]);
+    const [panels, setPanels] = useState<JSX.Element[]>([]);
     const { data: allGenres, isLoading, error } = useGenres();
 
     const getGenreMovie = async (id: number) => {
         if (allGenres) {
             const genre = allGenres.genres.filter((genre: allGenresType) => genre.id === id)
             if (genre) {
-                return genre[0].nome
+                return genre[0].nome as string
             }
-
-        } else {
-            const response = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?id=${id}`)
-                .then(response => response.json())
-                .then(data => data[0] !== undefined ? data[0].nome : "indefinido")
-                .catch(error => {
-                    console.error(error)
-                    return "indefinido"
-                })
-            return response
         }
+        // else {
+        //     const response = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?id=${id}`)
+        //         .then(response => response.json())
+        //         .then(data => data[0] !== undefined ? data[0].nome : "indefinido")
+        //         .catch(error => {
+        //             console.error(error)
+        //             return "indefinido"
+        //         })
+        //     return response
+        // }
     }
 
     const getIdGenre = async (genreName: string) => {
         if (allGenres) {
             const genre = allGenres.genres.filter((genre: allGenresType) => genre.nome === genreName)
             if (genre) {
-                return `?genre_ids=${genre[0].id}`
+                return `?genre_ids=${genre[0].id as number}`
             }
 
-        } else {
-            const res = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?nome=${genreName}`)
-            const data = await res.json()
-            const id = Number(data[0].id)
-            return `?genre_ids=${id}`
         }
+        // else {
+        //     const res = await fetch(`https://my-json-server.typicode.com/limonheiro/db_genres/genres?nome=${genreName}`)
+        //     const data = await res.json()
+        //     const id = Number(data[0].id)
+        //     return `?genre_ids=${id}`
+        // }
     }
 
     const Seccao = async (genre: string, newVideo?: boolean) => {
         const data = newVideo ? '?new=true' : await getIdGenre(genre)
-        fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies${data}`)
+        const panel = await fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies${data}`)
             .then(res => res.json())
             .then(async (data) => {
-                const panel = await Promise.all(data.slice(0, 6).map(async (movie: BD) => {
+                return await Promise.all(data.slice(0, 6).map(async (movie: BD) => {
                     const genero = await getGenreMovie(movie.genre_ids[0]);
                     return (
                         <React.Fragment key={nanoid()}>
@@ -89,7 +89,7 @@ export const useMoviesProvider = () => {
                                 key={nanoid()}
                                 id={movie.id}
                                 title={movie.title}
-                                genre={genero}
+                                genre={genero as string}
                                 genre_ids={movie.genre_ids}
                                 ano={movie.release_date}
                                 video_link={movie.video_link}
@@ -100,37 +100,34 @@ export const useMoviesProvider = () => {
                         </React.Fragment>
                     );
                 }));
-                const ContainerPanel = (
-                    <React.Fragment key={nanoid()}>
-                        <Titulo>{genre}</Titulo>
-                        <Container key={nanoid()} $column={!true}>
-                            {panel}
-                        </Container>
-                    </React.Fragment>
-                );
 
-                setPanels(Anterior => {
-                    if (newVideo) {
-                        return (
-                            <>
-                                {Anterior}
-                                <NewVideoStyled key={nanoid()}>
-                                    {ContainerPanel}
-                                </NewVideoStyled>
-                            </>
-                        )
-                    } else {
-                        return (
-                            <>
-                                {Anterior}
-                                <Container key={nanoid()} $column={(!false)}>
-                                    {ContainerPanel}
-                                </Container>
-                            </>
-                        );
-                    }
-                });
             });
+        const ContainerPanel = (
+            <React.Fragment key={nanoid()}>
+                <Titulo>{genre}</Titulo>
+                <Container key={nanoid()} $column={!true}>
+                    {panel}
+                </Container>
+            </React.Fragment>
+        );
+
+        if (newVideo) {
+            return [
+                <>
+                    <NewVideoStyled key={nanoid()}>
+                        {ContainerPanel}
+                    </NewVideoStyled>
+                </>
+             ] as JSX.Element[]
+        } else {
+            return [
+                <>
+                    <Container key={nanoid()} $column={(!false)}>
+                        {ContainerPanel}
+                    </Container>
+                </>
+             ] as JSX.Element[];
+        }
 
     };
 

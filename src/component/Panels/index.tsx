@@ -21,36 +21,33 @@ const SeccaoStyled = styled.div`
 
 
 export const Panels = () => {
-    const { panels, Seccao, isLoading, error } = useMoviesProvider()
-
+    const { panels, setPanels, Seccao } = useMoviesProvider()
 
     const listaSeccoes: (string | boolean)[][] = [['Recentes', true], ['Família'], ['Ação'], ['Romance']]
+
+
 
     useMemo(() => {
         async function Seccoes() {
 
+            let seccao: JSX.Element[]
+            seccao = []
 
             for (const NomeSeccao of listaSeccoes) {
                 if (NomeSeccao.length === 1) {
-                    await Seccao(NomeSeccao[0] as string)
+                    seccao = await Seccao(NomeSeccao[0] as string)
                 }
                 if (NomeSeccao.length === 2) {
                     const [genre, newVideo] = NomeSeccao;
-                    await Seccao(genre as string, newVideo as boolean)
+                    seccao = await Seccao(genre as string, newVideo as boolean)
 
                 }
+                 await Promise.all(seccao.map((s: JSX.Element) => setPanels(Anterior => [...Anterior, s])))
             }
         }
         Seccoes()
     }, [])
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
-
-    if (error) {
-        return (<div>Error loading genres: error</div>);
-    }
 
     return (
         <PanelStyled>

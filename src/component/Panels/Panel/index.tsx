@@ -232,7 +232,7 @@ export const Panel = ({ id, title, genre, genre_ids, ano, describe, video_link, 
                         onMouseEnter={() => setFocused(true)}
                         onMouseLeave={() => setFocused(false)}
                     >
-                        <img src={img} />
+                        <img src={img} alt={`Imagem do filme '${title}'`} />
                         <ContainerTitleStyled>
                             <h1>{title}</h1>
                             <ContainerSubtitleStyled >

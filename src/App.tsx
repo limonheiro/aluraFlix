@@ -4,6 +4,7 @@ import { GlobalStyled } from "./component/GlobalStyled"
 import { Panels } from "./component/Panels"
 import { MoviesProvider } from "./context/MoviesContext"
 import { Footer } from "./component/Footer"
+import { useGenres } from "./hooks/useGenres"
 
 const PanelStyled = styled.div`
   display: flex;
@@ -11,7 +12,10 @@ const PanelStyled = styled.div`
 `
 
 function App() {
+  const { isLoading } = useGenres()
 
+  if (isLoading) return 'Is Loading...'
+  
   return (
     <>
       <GlobalStyled />

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { CirclePlus } from 'lucide-react';
-import img from '../../assets/img/madMax-700.webp'
+import img from '../../assets/img/madMax-400.webp'
 import { useState } from 'react';
 import { DialogStyled, OverlayStyled } from '../Dialog';
 import { Form } from '../Form';
@@ -12,7 +12,7 @@ const BannerStyled = styled.div<{ image: string }>`
     /* width:100vw; */
     max-width: 100%;
     align-items: center;
-    height: 516px;
+    height: 355px;
     background-image: ${props => props.image && `url(${props.image})`};
     background-size:cover;
     background-repeat:no-repeat;
