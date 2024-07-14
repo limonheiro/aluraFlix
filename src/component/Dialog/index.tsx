@@ -48,7 +48,7 @@ export const DialogStyled = styled.dialog<{ $form: boolean }>`
     button{
         border: 1px solid transparent;
         border-radius: 10px;
-        margin-left: 1rem;
+        /* margin-left: 1rem; */
         padding: 0.75rem;
         width: fit-content;
         font-size: 1rem;
@@ -95,6 +95,7 @@ export const DialogStyled = styled.dialog<{ $form: boolean }>`
         margin: 0;
         margin-top: 1rem;
         padding: 0;
+        justify-content:space-between;
     }
     .container_checkbox{
         scrollbar-width: thin;
@@ -125,30 +126,12 @@ type typeDialogProps = {
     linkVideo: string 
 }
 
-// const getAllLinks = () => {
-//     fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies`)
-//         .then(res => res.json())
-//         .then(async (data) => {
-//             data.map(movie => {
-//                 fetch(`https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=7bd8468dd9add6745a48f0808ba6f1db&language=pt-BR`)
-//                     .then(res => res.json())
-//                     .then(data => {
-//                         if (data.results[0].key) {
-//                             console.log(movie.id,`https://www.youtube.com/watch?v=${data.results[0].key}`)
-//                         }
-//                     })
-//             })
-//         })
-// }
-
 export const Dialog = ({
     showModal = false,
     functionShowModal,
     linkVideo,
 }: typeDialogProps) => {
-    // const URL = `https://www.youtube.com/embed/${linkVideo}?si=_kJceVPnZL2f_Jga`
     const URL = linkVideo
-    // console.log(linkVideo)
     return (
         <>
             {showModal &&
