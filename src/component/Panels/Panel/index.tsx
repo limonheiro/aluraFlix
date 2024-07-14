@@ -47,9 +47,10 @@ const PanelStyled = styled.div`
     z-index: 1;
     /* position: absolute; */
     img{
-       width:100%; 
-       height: 100%;
-       object-fit:cover;
+        width:100%; 
+        height: 100%;
+        max-height: 150px;
+        object-fit:cover;
     }
 `
 
@@ -114,6 +115,7 @@ const ContainerSubtitleStyled = styled.div`
     text-align: left;
     text-shadow: black 0.1rem 0.1rem 2rem;
     margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
 
     :first-child{
         flex-shrink: 9;
@@ -193,7 +195,7 @@ export const Panel = ({ id, title, genre, genre_ids, ano, describe, video_link, 
 
     async function trailerID() {
 
-        if(linkVideo === ''){
+        if (linkVideo === '') {
             const hashVideo = video_link.split('watch?v=')[1]
             console.log(hashVideo)
             setLinkVideo(`https://www.youtube.com/embed/${hashVideo}?si=ZQrkDkNQwzSw7wqp&amp;controls=0`)

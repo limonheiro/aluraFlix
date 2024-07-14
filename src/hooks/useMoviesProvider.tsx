@@ -78,10 +78,11 @@ export const useMoviesProvider = () => {
 
     const Seccao = async (genre: string, newVideo?: boolean) => {
         const data = newVideo ? '?new=true' : await getIdGenre(genre)
+        const numberMovies = newVideo ? 999 : 6
         const panel = await fetch(`https://668480d656e7503d1ae06de1.mockapi.io/movies${data}`)
             .then(res => res.json())
             .then(async (data) => {
-                return await Promise.all(data.slice(0, 6).map(async (movie: BD) => {
+                return await Promise.all(data.slice(0, numberMovies).map(async (movie: BD) => {
                     const genero = await getGenreMovie(movie.genre_ids[0]);
                     return (
                         <React.Fragment key={nanoid()}>
